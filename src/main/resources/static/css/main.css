@@ -293,16 +293,6 @@ h6 {
   align-items: center;
 }
 
-.Address {
-  font-size: 14px;
-  color: red;
-}
-@media (min-width: 992px) {
-  .Address {
-    font-size: 18px;
-  }
-}
-
 .login-button {
   border-radius: 25px;
 }
