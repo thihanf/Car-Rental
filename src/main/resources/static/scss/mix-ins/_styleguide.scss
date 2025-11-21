@@ -11,7 +11,7 @@ h6 {
 }
 
 .h1-title {
-  @include textStyle(Work Sans, 20px, normal, 1px, black);
+  @include textStyle($primary-font, 20px, normal, 1px, black);
 
   @include tablet-landscape {
     font-size: 50px;
@@ -20,7 +20,7 @@ h6 {
 }
 
 .h1-title-hero {
-  @include textStyle(Work Sans, 32px, normal, 1px, black);
+  @include textStyle($primary-font, 32px, normal, 1px, black);
 
   @include tablet-landscape {
     font-size: 60px;
@@ -29,7 +29,7 @@ h6 {
 }
 
 .h1-score {
-  @include textStyle(Work Sans, 40px, normal, 1px, black);
+  @include textStyle($primary-font, 40px, normal, 1px, black);
 
   @include tablet-landscape {
     font-size: 80px;
@@ -38,7 +38,7 @@ h6 {
 }
 
 .h2-title {
-  @include textStyle(Work Sans, 20px, normal, 1px, black);
+  @include textStyle($primary-font, 20px, normal, 1px, black);
 
   @include tablet-landscape {
     font-size: 40px;
@@ -46,8 +46,8 @@ h6 {
   }
 }
 
-.h3-title-form-Title {
-  @include textStyle(Work Sans, 15px, normal, 1px, black);
+.h3-title-form-title {
+  @include textStyle($primary-font, 15px, normal, 1px, black);
 
   @include tablet-landscape {
     font-size: 28px;
@@ -56,7 +56,7 @@ h6 {
 }
 
 .h3-title {
-  @include textStyle(Work Sans, 14px, normal, 0px, black);
+  @include textStyle($primary-font, 14px, normal, 0px, black);
 
   @include tablet-landscape {
     font-size: 24px;
@@ -65,7 +65,7 @@ h6 {
 }
 
 .p-price-tag {
-  @include textStyle(Work Sans, 14px, normal, 1px, $primary-btn-color);
+  @include textStyle($primary-font, 14px, normal, 1px, $primary-color);
   font-weight: 600; // semi-bold
 
   @include tablet-landscape {
@@ -75,7 +75,7 @@ h6 {
 }
 
 .p-body-text {
-  @include textStyle(Work Sans, 12px, normal, 1px, black);
+  @include textStyle($primary-font, 12px, normal, 1px, black);
 
   @include tablet-landscape {
     font-size: 16px;
@@ -84,7 +84,7 @@ h6 {
 }
 
 .p-body-text-gray {
-  @include textStyle(Work Sans, 12px, normal, 1px, black);
+  @include textStyle($primary-font, 12px, normal, 1px, black);
   opacity: 0.6;
 
   @include tablet-landscape {
@@ -92,17 +92,18 @@ h6 {
     line-height: normal;
   }
 }
+//----------typography ends here------------------
 
-//buttons
+//----------buttons start here------------------
 .btn-primary {
-  background-color: $primary-btn-color;
+  background-color: $primary-color;
   width: 100%;
   border: none;
   border-radius: 8px;
   color: white;
   font-size: 14px;
   font-weight: bold;
-  font-family: Work Sans;
+  font-family: $primary-font;
   padding: 15.5px 20px;
 
   @include tablet-landscape {
@@ -114,23 +115,26 @@ h6 {
 }
 
 .btn-secondary {
-  background-color: $secondary-btn-color;
+  background-color: $secondary-color;
   width: 100%;
   border: none;
   border-radius: 8px;
   color: white;
   font-size: 14px;
   font-weight: bold;
-  font-family: Work Sans;
-  padding: 10.5px 20px;
+  font-family: $primary-font;
+  padding: 13px 28px;
 
   @include tablet-landscape {
-    width: 336px;
+    width: 100%;
     border-radius: 12px;
     font-size: 16px;
   }
 }
 
+//----------buttons end here------------------
+
+//content width wrapper
 .content-width {
   width: calc(100% - 40px);
   margin-inline: auto;
@@ -140,8 +144,6 @@ h6 {
     max-width: 1296px;
   }
 }
-
-//----------typography s here------------------
 
 // ------------Card styles start here------------------------
 
