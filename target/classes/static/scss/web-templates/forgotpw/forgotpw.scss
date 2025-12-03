@@ -1,0 +1,11 @@
+@import 'authbase';
+
+.auth-card {
+  h2 {
+    color: $primary-color;
+  }
+
+  .btn-submit {
+    background-color: lighten($primary-color, 5%);
+  }
+}

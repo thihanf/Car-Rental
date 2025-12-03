@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <div class="auth-page">
+    <div class="auth-page__content">
+      <div class="auth-card">
+
+        <h2 class="auth-card__title">Log in</h2>
+
+        <form class="auth-form" novalidate>
+          <div class="auth-form__field-group">
+            
+            <div class="auth-form__input-wrapper">
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="auth-form__input"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+              />
+              <span class="auth-form__status-icon"></span>
+            </div>
+          </div>
+
+          <div class="auth-form__field-group">
+            
+            <div class="auth-form__input-wrapper">
+              <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                class="auth-form__input"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              />
+              <span class="auth-form__status-icon"></span>
+            </div>
+          </div>
+
+          <div class="auth-form__forgot-row">
+            <a href="forgotpw.html" class="auth-form__link">Forgot password?</a>
+          </div>
+
+          <div class="auth-form__button-row">
+            <button type="submit" class="btn-primary">Log in</button>
+          </div>
+
+          <div class="auth-form__divider">
+            <div class="auth-form__divider-line"></div>
+            <span class="auth-form__divider-text">Or login with social account</span>
+            <div class="auth-form__divider-line"></div>
+          </div>
+
+          <div class="auth-form__social-row">
+            <button type="button" class="auth-form__social-btn">
+              <img src="assets/Google.svg" class="auth-form__social-icon" alt="Google login" />
+            </button>
+            <button type="button" class="auth-form__social-btn">
+              <img src="assets/Facebook.svg" class="auth-form__social-icon" alt="Facebook login" />
+            </button>
+          </div>
+          
+        </form>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
