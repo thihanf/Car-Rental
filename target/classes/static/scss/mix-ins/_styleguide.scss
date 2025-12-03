@@ -1,0 +1,262 @@
+//----------typography starts here------------------
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.h1-title {
+  @include textStyle($primary-font, 20px, normal, 1px, black);
+
+  @include tablet-landscape {
+    font-size: 50px;
+    line-height: normal;
+  }
+}
+
+.h1-title-hero {
+  @include textStyle($primary-font, 32px, normal, 1px, black);
+
+  @include tablet-landscape {
+    font-size: 60px;
+    line-height: normal;
+  }
+}
+
+.h1-score {
+  @include textStyle($primary-font, 40px, normal, 1px, black);
+
+  @include tablet-landscape {
+    font-size: 80px;
+    line-height: normal;
+  }
+}
+
+.h2-title {
+  @include textStyle($primary-font, 20px, normal, 1px, black);
+
+  @include tablet-landscape {
+    font-size: 40px;
+    line-height: normal;
+  }
+}
+
+.h3-title-form-title {
+  @include textStyle($primary-font, 15px, normal, 1px, black);
+
+  @include tablet-landscape {
+    font-size: 28px;
+    line-height: normal;
+  }
+}
+
+.h3-title {
+  @include textStyle($primary-font, 14px, normal, 0px, black);
+
+  @include tablet-landscape {
+    font-size: 24px;
+    line-height: normal;
+  }
+}
+
+.p-price-tag {
+  @include textStyle($primary-font, 14px, normal, 1px, $primary-color);
+  font-weight: 600; // semi-bold
+
+  @include tablet-landscape {
+    font-size: 24px;
+    line-height: normal;
+  }
+}
+
+.p-body-text {
+  @include textStyle($primary-font, 12px, normal, 1px, black);
+
+  @include tablet-landscape {
+    font-size: 16px;
+    line-height: normal;
+  }
+}
+
+.p-body-text-gray {
+  @include textStyle($primary-font, 12px, normal, 1px, black);
+  opacity: 0.6;
+
+  @include tablet-landscape {
+    font-size: 16px;
+    line-height: normal;
+  }
+}
+//----------typography ends here------------------
+
+//----------buttons start here------------------
+.btn-primary {
+  background-color: $primary-color;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: $primary-font;
+  padding: 15.5px 20px;
+
+  @include tablet-landscape {
+    width: 100%;
+    max-width: 368px;
+    border-radius: 12px;
+    font-size: 16px;
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: $primary-font;
+  padding: 13px 28px;
+
+  @include tablet-landscape {
+    width: 100%;
+    border-radius: 12px;
+    font-size: 16px;
+  }
+}
+
+//----------buttons end here------------------
+
+//content width wrapper
+.content-width {
+  width: calc(100% - 40px);
+  margin-inline: auto;
+
+  @include tablet-landscape {
+    width: calc(100% - 144px);
+    max-width: 1296px;
+  }
+}
+
+// ------------Card styles start here------------------------
+
+.car-card {
+  width: 100%; // Adjusted width
+  // height: 350px; // Height will adjust based on content with flex
+  border: 1px solid rgb(229, 229, 229);
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center items horizontally
+  gap: 16px; // Space between image and details
+
+  @include tablet-landscape {
+    // height: 420px;
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 368 / 232;
+    overflow: hidden;
+    @include tablet-landscape {
+      aspect-ratio: 368 / 240;
+    }
+
+    .picture,
+    .image {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .image {
+      object-fit: cover;
+    }
+  }
+
+  .car-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px; // Space between detail elements
+
+    .title-and-price {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .top-wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .bottom-wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .per-day-text {
+      font-size: 12px;
+
+      @include tablet-landscape {
+        font-size: 14px;
+      }
+    }
+
+    .features-row {
+      display: flex;
+      justify-content: space-between; // Space out features
+      margin-top: 12px;
+      margin-bottom: 16px; // Space before button
+
+      @include tablet-landscape {
+        margin-top: 20px;
+        margin-bottom: 24px;
+      }
+
+      .feature-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        gap: 4px;
+
+        .feature-icon {
+          width: 20px;
+          height: 20px;
+          color: black; // Icon color
+
+          @include tablet-landscape {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+// ------------Card styles end here------------------------
