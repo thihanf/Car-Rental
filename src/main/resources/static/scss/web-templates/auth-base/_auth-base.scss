@@ -1,4 +1,4 @@
-$input-border: rgba(0, 0, 0, 0.12);
+$input-border: rgba(0,0,0,0.12);
 $bg-color: #fff;
 $border-radius: 8px;
 $padding-base: 1rem;
@@ -7,7 +7,11 @@ $padding-base: 1rem;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
   font-family: "Work Sans", sans-serif;
+
+  font-family: 'Work Sans', sans-serif;
+
 }
 
 .auth-page {
@@ -103,7 +107,11 @@ $padding-base: 1rem;
 .auth-form__divider-line {
   flex: 1;
   height: 1px;
+
   background: rgba(0, 0, 0, 0.08);
+
+  background: rgba(0,0,0,0.08);
+
 }
 
 .auth-form__divider-text {
@@ -121,7 +129,10 @@ $padding-base: 1rem;
   width: 56px;
   height: 56px;
   border-radius: 999px;
+
   border: 1px solid rgba(0, 0, 0, 0.08);
+
+  border: 1px solid rgba(0,0,0,0.08);
   background: #fff;
   display: flex;
   align-items: center;
@@ -156,6 +167,7 @@ $padding-base: 1rem;
   }
 
   .auth-card__title {
+
     color: #000;
     font-size: 24px;
     font-weight: 600;
@@ -163,6 +175,16 @@ $padding-base: 1rem;
     text-align: center;
     width: 100%;
   }
+
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center; 
+  width: 100%;        
+}
+
+
 
   .auth-form {
     gap: 20px;
@@ -198,6 +220,7 @@ $padding-base: 1rem;
 }
 
 @media (min-width: 768px) {
+
   .auth-page {
     padding-top: 4rem;
     display: flex;
@@ -211,7 +234,11 @@ $padding-base: 1rem;
     background: #fff;
     padding: 3.5rem 3rem;
     border-radius: 28px;
+
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.20);
+
     margin-top: 1.5rem;
   }
 
