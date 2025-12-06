@@ -1,7 +1,3 @@
-.login-button {
-  border-radius: 25px;
-}
-
 .homepage-hero {
   .wrap-all {
     background-color: $primary-color;
@@ -62,10 +58,17 @@
     }
   }
 
+  //-----form styles start here------
   .form-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     background-color: white;
-    padding-block: 250px;
+    border-radius: 20px;
+    padding: 40px;
+    row-gap: 40px;
+    box-sizing: border-box; //contain the form
     @include tablet-landscape {
       width: 50%;
     }
@@ -77,4 +80,35 @@
   .hero-text-color {
     color: white;
   }
+
+  .input-label-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+  }
+
+  .date-field-wrapper {
+    width: 100%;
+  }
+
+  .date-field {
+    padding-block: 9px; //padding top and bottom
+    padding-inline: 16px; //padding left and right
+    border-radius: 12px;
+    border: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba($primary-color, 0.6); //0.6 is 60% opacity
+  }
+
+  .label {
+    font-size: 14px;
+
+    @include tablet-landscape {
+      font-size: 20px;
+    }
+  }
+
+  //------form styles end here
 }
