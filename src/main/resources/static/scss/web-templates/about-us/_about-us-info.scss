@@ -1,0 +1,44 @@
+.about-us-info {
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-block: 30px;
+    @include tablet-landscape {
+      flex-direction: row;
+      gap: 80px;
+      padding-block: 60px;
+    }
+  }
+
+  .middle-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    @include tablet-portrait {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+  }
+
+  .info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .title-center {
+    text-align: center;
+    font-size: 30px;
+    @include tablet-landscape {
+      text-align: start;
+    }
+  }
+
+  .text-center {
+    text-align: center;
+    @include tablet-portrait {
+      text-align: start;
+    }
+  }
+}
