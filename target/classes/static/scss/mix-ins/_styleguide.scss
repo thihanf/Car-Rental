@@ -146,10 +146,7 @@ h6 {
 }
 
 // ------------Card styles start here------------------------
-
 .car-card {
-  width: 100%; // Adjusted width
-  // height: 350px; // Height will adjust based on content with flex
   border: 1px solid rgb(229, 229, 229);
   border-radius: 20px;
   padding: 16px;
@@ -161,7 +158,6 @@ h6 {
   gap: 16px; // Space between image and details
 
   @include tablet-landscape {
-    // height: 420px;
     padding: 24px;
     gap: 24px;
   }
