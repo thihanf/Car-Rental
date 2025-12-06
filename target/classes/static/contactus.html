@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Car Rental</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-car"></i>
+                    <span>CarRental</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#"><i class="fas fa-home"></i> Home</a>
+                    <a href="#" class="active"><i class="fas fa-address-book"></i> Contact</a>
+                    <a href="#"><i class="fas fa-car"></i> Cars</a>
+                    <a href="#"><i class="fas fa-calendar-alt"></i> Bookings</a>
+                    <a href="#"><i class="fas fa-user"></i> Account</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn btn-secondary"><i class="fas fa-phone"></i> 1029 566-4001</button>
+                    <button class="btn btn-primary">Book Now</button>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="#"><i class="fas fa-home"></i> Home</a>
+                <span class="divider">/</span>
+                <span class="current">Contact Us</span>
+            </div>
+            <h1 class="page-title">Contact Us</h1>
+        </div>
+    </section>
+
+    <main class="container main-container">
+        <div class="contact-layout">
+            <!-- Left Column: Contact Form -->
+            <div class="contact-form-section">
+                <div class="section-header">
+                    <h2 class="section-title">Book your car</h2>
+                    <p class="section-subtitle">Fill out the form below to get in touch with us</p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="carType" class="form-label">
+                                <i class="fas fa-car"></i> Car type
+                            </label>
+                            <select id="carType" class="form-select" required>
+                                <option value="">Select car type</option>
+                                <option value="sedan">Sedan</option>
+                                <option value="suv">SUV</option>
+                                <option value="luxury">Luxury</option>
+                                <option value="sports">Sports</option>
+                                <option value="electric">Electric</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pickupDate" class="form-label">
+                                <i class="fas fa-calendar"></i> Pickup date
+                            </label>
+                            <input type="date" id="pickupDate" class="form-input" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="returnDate" class="form-label">
+                                <i class="fas fa-calendar-check"></i> Return date
+                            </label>
+                            <input type="date" id="returnDate" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fullName" class="form-label">
+                                <i class="fas fa-user"></i> Full name
+                            </label>
+                            <input type="text" id="fullName" class="form-input" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phoneNumber" class="form-label">
+                                <i class="fas fa-phone"></i> Telephone number
+                            </label>
+                            <input type="tel" id="phoneNumber" class="form-input" placeholder="Enter your phone number" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">
+                            <i class="fas fa-comment"></i> Additional requirements
+                        </label>
+                        <textarea id="message" class="form-textarea" rows="4" placeholder="Any special requirements or questions..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        <button type="reset" class="btn btn-secondary">
+                            <i class="fas fa-redo"></i> Reset Form
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right Column: Contact Info & Blog -->
+            <div class="contact-info-section">
+                <!-- Contact Information -->
+                <div class="contact-info-card">
+                    <h3 class="info-card-title">Get in touch</h3>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4 class="info-label">Address</h4>
+                            <p class="info-value">Contact June, Cary, NC 27511</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4 class="info-label">Email</h4>
+                            <p class="info-value">multicar@yahoo.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4 class="info-label">Phone</h4>
+                            <p class="info-value">1527 557-4401</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4 class="info-label">Opening Hours</h4>
+                            <p class="info-value">Monday - Friday: 9am - 6pm</p>
+                            <p class="info-value">Saturday: 10am - 4pm</p>
+                            <p class="info-value">Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Latest Blog Posts -->
+                <div class="blog-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Latest blog posts & news</h2>
+                    </div>
+
+                    <div class="blog-grid">
+                        <!-- Blog Post 1 -->
+                        <article class="blog-card">
+                            <div class="blog-image">
+                                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500" alt="Car">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">Tips & Guides</span>
+                                    <span class="blog-date">May 15, 2023</span>
+                                </div>
+                                <h3 class="blog-title">How To Choose The Right Car</h3>
+                                <p class="blog-excerpt">Learn how to select the perfect car for your needs and budget.</p>
+                                <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 2 -->
+                        <article class="blog-card">
+                            <div class="blog-image">
+                                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500" alt="Car Plans">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">Plans</span>
+                                    <span class="blog-date">May 10, 2023</span>
+                                </div>
+                                <h3 class="blog-title">Which plan is right for me?</h3>
+                                <p class="blog-excerpt">Compare our rental plans to find the one that suits your needs.</p>
+                                <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 3 -->
+                        <article class="blog-card">
+                            <div class="blog-image">
+                                <img src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500" alt="Car Speed">
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-category">Experience</span>
+                                    <span class="blog-date">May 5, 2023</span>
+                                </div>
+                                <h3 class="blog-title">Enjoy Speed, Choice & Total Control</h3>
+                                <p class="blog-excerpt">Experience the thrill of driving with our premium car collection.</p>
+                                <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-car"></i>
+                        <span>CarRental</span>
+                    </div>
+                    <p class="footer-description">
+                        Premium car rental service with the best vehicles and customer support.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> About us</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Account</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Contact June, Cary, NC 27511</p>
+                        <p><i class="fas fa-phone"></i> 1029 566-4001</p>
+                        <p><i class="fas fa-envelope"></i> multicar@yahoo.com</p>
+                    </div>
+                </div>
+
+                <!-- App Download -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Download Our App</h3>
+                    <p class="app-description">Book cars on the go with our mobile app.</p>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-apple"></i>
+                            <div>
+                                <span>Download on the</span>
+                                <strong>App Store</strong>
+                            </div>
+                        </a>
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div>
+                                <span>Get it on</span>
+                                <strong>Google Play</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <p>&copy; 2023 CarRental Pro, Inc. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+                <div class="footer-bottom-right">
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa" title="Visa"></i>
+                        <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                        <i class="fab fa-cc-amex" title="American Express"></i>
+                        <i class="fab fa-cc-paypal" title="PayPal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/contact.js"></script>
+</body>
+</html>''

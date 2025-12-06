@@ -1,0 +1,24 @@
+
+@import "mix-ins/variables";
+@import "mix-ins/mixin";
+@import "mix-ins/styleguide";
+
+
+@import "web-templates/auth-base/auth-base";
+@import "web-templates/signup/signup";
+@import "web-templates/signin/signin";
+@import "web-templates/forgotpw/forgotpw";
+
+//navbar & footer
+@import "./web-templates/navbar&footer/navbar";
+@import "./web-templates/navbar&footer/footer";
+
+//blocks
+//homepage
+@import "./web-templates/homepage/homepage-hero";
+@import "./web-templates/homepage/homepage-info-block";
+@import "./web-templates/homepage/homepage-feature-block";
+@import "./web-templates/homepage/homepage-car-gallery-block.scss";
+
+//payment dispay
+@import "./web-templates/payment-details/paymentdetails";
