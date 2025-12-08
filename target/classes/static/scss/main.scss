@@ -1,0 +1,8 @@
+@import "mix-ins/variables";
+@import "mix-ins/mixin";
+@import "mix-ins/styleguide";
+@import "./web-templates/homepage/homepage-hero";
+
+//Vehicle Gallery
+@import "./web-templates/VehicleGallery/vehicle-tabs";
+@import"./web-templates/VehicleGallery/vehicle-gallery";

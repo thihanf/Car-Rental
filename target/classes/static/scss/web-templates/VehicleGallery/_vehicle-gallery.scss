@@ -1,0 +1,132 @@
+.vehiclegallery {
+  .wrap-all {
+    background-color: $primary-color;
+    border-radius: 15px;
+    @include tablet-landscape {
+      border-radius: 25px;
+    }
+  }
+}
+
+  .inner-wrap {
+    padding: 34.5px 34px 34px 36px;
+    @include tablet-landscape {
+      padding: 78.5px 78px 78.5px 72px;
+    }
+  }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 15px;
+}
+
+
+
+@media (max-width: 992px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.right {
+    text-align: right;
+}
+
+.h3-title-price {
+  @include textStyle($primary-font, 14px, normal, 0px, black);
+
+  @include tablet-landscape {
+    font-size: 24px;
+    line-height: normal;
+    color: #6b4eff;
+  }
+}
+
+.per-day {
+    font-size: 14px;
+    color: #999;
+}
+
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.car-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.p-body-text-1{
+    margin-top: 10px;
+    font-size: 20px;
+    color: #6b4eff;
+    font-weight: bold;
+}
+
+.p-body-text-1 span {
+    font-size: 13px;
+    color: #888;
+}
+
+
+.features {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555;
+}
+
+.btn-primary-2 {
+    background-color: $primary-color;
+    width: 100%;
+    margin-top: 20px;
+    background: #6b4eff;
+    color: #fff;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: $primary-font;
+
+    @include tablet-landscape {
+    width: 100%;
+    border-radius: 12px;
+    font-size: 16px;
+  }
+}
+button:hover {
+    background: #5439e6;
+}
+
