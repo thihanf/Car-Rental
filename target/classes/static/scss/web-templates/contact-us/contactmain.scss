@@ -1,0 +1,185 @@
+// contact.scss - Main SCSS File
+@import 'variables';
+@import 'mixins';
+@import 'contact';
+
+// Additional styles
+.validation-message {
+    display: none;
+    font-size: $font-size-sm;
+    margin-top: $spacing-xs;
+    
+    &.error {
+        display: block;
+        color: $error-color;
+    }
+    
+    &.success {
+        display: block;
+        color: $success-color;
+    }
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba($text-white, 0.3);
+    border-radius: 50%;
+    border-top-color: $text-white;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: $spacing-sm;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+// Toast Notification
+.toast-container {
+    position: fixed;
+    top: $spacing-xl;
+    right: $spacing-xl;
+    z-index: $z-tooltip;
+    
+    @include mobile {
+        top: $spacing-lg;
+        right: $spacing-lg;
+        left: $spacing-lg;
+    }
+}
+
+.toast {
+    @include card-base;
+    margin-bottom: $spacing-md;
+    animation: slideUp 0.3s ease-out;
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    padding: $spacing-lg;
+    
+    &.toast-success {
+        border-left: 4px solid $success-color;
+    }
+    
+    &.toast-error {
+        border-left: 4px solid $error-color;
+    }
+    
+    &.toast-warning {
+        border-left: 4px solid $warning-color;
+    }
+    
+    .toast-icon {
+        font-size: $font-size-xl;
+        
+        &.success {
+            color: $success-color;
+        }
+        
+        &.error {
+            color: $error-color;
+        }
+        
+        &.warning {
+            color: $warning-color;
+        }
+    }
+    
+    .toast-content {
+        flex: 1;
+        
+        .toast-title {
+            font-weight: $font-semibold;
+            color: $text-dark;
+            margin-bottom: $spacing-xs;
+        }
+        
+        .toast-message {
+            color: $text-medium;
+            font-size: $font-size-sm;
+        }
+    }
+    
+    .toast-close {
+        background: none;
+        border: none;
+        color: $text-light;
+        cursor: pointer;
+        font-size: $font-size-lg;
+        padding: 0;
+        
+        &:hover {
+            color: $text-dark;
+        }
+    }
+}
+
+// Form states
+.form-group {
+    position: relative;
+    
+    &.has-error {
+        .form-input,
+        .form-select,
+        .form-textarea {
+            border-color: $error-color;
+            
+            &:focus {
+                box-shadow: 0 0 0 3px rgba($error-color, 0.1);
+            }
+        }
+    }
+    
+    &.has-success {
+        .form-input,
+        .form-select,
+        .form-textarea {
+            border-color: $success-color;
+            
+            &:focus {
+                box-shadow: 0 0 0 3px rgba($success-color, 0.1);
+            }
+        }
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 480px) {
+    .contact-form .form-actions {
+        .btn {
+            justify-content: center;
+        }
+    }
+    
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $spacing-md;
+        
+        .info-icon {
+            align-self: flex-start;
+        }
+    }
+}
+
+// Print styles
+@media print {
+    .nav-actions,
+    .mobile-menu-btn,
+    .form-actions .btn-secondary,
+    .social-links,
+    .app-buttons,
+    .payment-methods {
+        display: none !important;
+    }
+    
+    .contact-form,
+    .contact-info-card,
+    .blog-card {
+        box-shadow: none;
+        border: 1px solid $border-color;
+    }
+}

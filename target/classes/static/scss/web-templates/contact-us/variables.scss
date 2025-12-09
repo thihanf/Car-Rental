@@ -1,0 +1,93 @@
+// _variables.scss - Contact Page
+// Colors
+$primary-color: #3a86ff;
+$primary-dark: #2667cc;
+$secondary-color: #8338ec;
+$accent-color: #ff006e;
+
+$text-dark: #1a1a2e;
+$text-medium: #414361;
+$text-light: #6c757d;
+$text-white: #ffffff;
+
+$bg-light: #f8f9fa;
+$bg-white: #ffffff;
+$bg-gray: #e9ecef;
+$bg-dark: #1a1a2e;
+
+$border-color: #dee2e6;
+$border-light: #e9ecef;
+
+// Status Colors
+$success-color: #38b000;
+$warning-color: #ff9e00;
+$error-color: #ff0054;
+
+// Gradients
+$gradient-primary: linear-gradient(135deg, #3a86ff 0%, #2667cc 100%);
+$gradient-secondary: linear-gradient(135deg, #8338ec 0%, #5a13cb 100%);
+
+// Shadows
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+$shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+$shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+// Border Radius
+$radius-sm: 6px;
+$radius-md: 10px;
+$radius-lg: 14px;
+$radius-xl: 18px;
+$radius-2xl: 24px;
+$radius-full: 50px;
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-2xl: 48px;
+$spacing-3xl: 64px;
+
+// Typography
+$font-heading: 'Poppins', sans-serif;
+$font-body: 'Inter', sans-serif;
+$font-mono: 'SF Mono', monospace;
+
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-2xl: 24px;
+$font-size-3xl: 30px;
+$font-size-4xl: 36px;
+$font-size-5xl: 48px;
+
+// Font Weights
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+// Transitions
+$transition-fast: 0.15s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Breakpoints
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1200px;
+$breakpoint-ultra: 1440px;
+
+// Z-index layers
+$z-dropdown: 1000;
+$z-sticky: 1020;
+$z-fixed: 1030;
+$z-modal: 1040;
+$z-popover: 1050;
+$z-tooltip: 1060;

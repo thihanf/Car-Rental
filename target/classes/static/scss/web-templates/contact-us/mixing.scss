@@ -1,0 +1,206 @@
+// _mixins.scss - Contact Page
+// Flexbox Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-start {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+// Grid Mixins
+@mixin grid-auto-fit($min-width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+    gap: $spacing-lg;
+}
+
+@mixin grid-columns($columns) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $spacing-lg;
+}
+
+// Card Mixins
+@mixin card-base {
+    background: $bg-white;
+    border-radius: $radius-lg;
+    border: 1px solid $border-light;
+    box-shadow: $shadow-md;
+    padding: $spacing-xl;
+}
+
+@mixin card-hover {
+    transition: transform $transition-normal, box-shadow $transition-normal;
+    
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-xl;
+    }
+}
+
+// Button Mixins
+@mixin btn-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-sm;
+    padding: $spacing-md $spacing-xl;
+    border-radius: $radius-md;
+    font-weight: $font-medium;
+    font-size: $font-size-md;
+    cursor: pointer;
+    transition: all $transition-fast;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-family: $font-body;
+    
+    i {
+        font-size: $font-size-lg;
+    }
+}
+
+@mixin btn-primary {
+    @include btn-base;
+    background: $primary-color;
+    color: $text-white;
+    box-shadow: 0 4px 12px rgba($primary-color, 0.3);
+    
+    &:hover {
+        background: $primary-dark;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba($primary-color, 0.4);
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+    
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+@mixin btn-secondary {
+    @include btn-base;
+    background: $bg-white;
+    color: $text-medium;
+    border: 1px solid $border-color;
+    
+    &:hover {
+        background: $bg-light;
+        border-color: $primary-color;
+        color: $primary-color;
+    }
+}
+
+@mixin btn-large {
+    padding: $spacing-lg $spacing-2xl;
+    font-size: $font-size-lg;
+    font-weight: $font-semibold;
+    
+    i {
+        font-size: $font-size-xl;
+    }
+}
+
+// Form Mixins
+@mixin form-input-base {
+    width: 100%;
+    padding: $spacing-md $spacing-lg;
+    border: 1px solid $border-color;
+    border-radius: $radius-md;
+    font-size: $font-size-md;
+    font-family: $font-body;
+    color: $text-dark;
+    background: $bg-white;
+    transition: all $transition-fast;
+    
+    &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+    }
+    
+    &::placeholder {
+        color: $text-light;
+        opacity: 0.7;
+    }
+}
+
+@mixin form-label {
+    display: block;
+    margin-bottom: $spacing-sm;
+    font-weight: $font-medium;
+    color: $text-dark;
+    font-size: $font-size-md;
+    
+    i {
+        margin-right: $spacing-sm;
+        color: $primary-color;
+    }
+}
+
+// Responsive Mixins
+@mixin mobile {
+    @media (max-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+// Animation Mixins
+@mixin fade-in($duration: 0.6s) {
+    animation: fadeIn $duration ease-out;
+}
+
+@mixin slide-up($duration: 0.4s) {
+    animation: slideUp $duration ease-out;
+}
+
+// Container Mixin
+@mixin container {
+    width: 100%;
+    max-width: $breakpoint-wide;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+    
+    @include mobile {
+        padding: 0 $spacing-md;
+    }
+}
