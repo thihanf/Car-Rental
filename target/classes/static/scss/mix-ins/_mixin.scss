@@ -1,0 +1,82 @@
+$tablet-portrait-width: 768px;
+$tablet-landscape-width: 992px;
+$tablet-custom-width: 991.98px;
+$desktop-width: 1200px;
+$laptop-width: 1366px;
+$desktop-wide-width: 1440px;
+$desktop-large-width: 1600px;
+$desktop-extra-large-width: 1920px;
+
+// Media query mixins - Tablet Portrait - 768px to up
+@mixin tablet-portrait {
+  @media (min-width: #{$tablet-portrait-width}) {
+    @content;
+  }
+}
+
+// Media query mixins - Tablet Landscape - 992 to up
+@mixin tablet-landscape {
+  @media (min-width: #{$tablet-landscape-width}) {
+    @content;
+  }
+}
+
+// Media query mixins - Desktop - 1200px to up
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+// Media query mixins - Laptop - 1366px to up
+@mixin laptop {
+  @media (min-width: #{$laptop-width}) {
+    @content;
+  }
+}
+
+// Media query mixins - Wide Desktop - 1440px to up
+@mixin wide-desktop {
+  @media (min-width: #{$desktop-wide-width}) {
+    @content;
+  }
+}
+
+// Media query mixins - Wide Desktop - 1600px to up
+@mixin large-desktop {
+  @media (min-width: #{$desktop-large-width}) {
+    @content;
+  }
+}
+
+// Media query mixins - extra Wide Desktop - 1920px to up
+@mixin extra-large-desktop {
+  @media (min-width: #{$desktop-extra-large-width}) {
+    @content;
+  }
+}
+
+// Text styles
+@mixin textStyle($family, $size, $lineheight, $letter_spacing, $color) {
+  font-family: $family;
+  font-size: $size;
+  line-height: $lineheight;
+  letter-spacing: $letter_spacing;
+  color: $color;
+}
+
+// hover style for except the touch device
+@mixin hover-styles {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// hover style for except the touch device
+@mixin hover-device {
+  @media (hover: hover) {
+    @content;
+  }
+}
