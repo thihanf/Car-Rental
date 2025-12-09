@@ -1,4 +1,3 @@
-
 @import "mix-ins/variables";
 @import "mix-ins/mixin";
 @import "mix-ins/styleguide";
@@ -28,6 +27,11 @@
 @import "./web-templates/homepage/homepage-car-gallery-block.scss";
 @import "./web-templates/homepage/homepage-info-banner";
 
+
+//Vehicle Gallery
+@import "./web-templates/VehicleGallery/vehicle-tabs";
+@import"./web-templates/VehicleGallery/vehicle-gallery";
+
 //about us
 @import "./web-templates/about-us/about-us-hero";
 @import "./web-templates/about-us/about-us-info";
@@ -37,3 +41,4 @@
 
 //car details
 @import "./web-templates/car_details/car_details";  
+
