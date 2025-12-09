@@ -1,0 +1,39 @@
+
+@import "mix-ins/variables";
+@import "mix-ins/mixin";
+@import "mix-ins/styleguide";
+
+
+@import "web-templates/auth-base/auth-base";
+@import "web-templates/signup/signup";
+@import "web-templates/signin/signin";
+@import "web-templates/forgotpw/forgotpw";
+
+//navbar & footer
+@import "./web-templates/navbar&footer/navbar";
+@import "./web-templates/navbar&footer/footer";
+
+//blocks
+
+//login and sign-up
+@import "web-templates/auth-base/auth-base";
+@import "web-templates/signup/signup";
+@import "web-templates/signin/signin";
+@import "web-templates/forgotpw/forgotpw";
+
+//homepage
+@import "./web-templates/homepage/homepage-hero";
+@import "./web-templates/homepage/homepage-info-block";
+@import "./web-templates/homepage/homepage-feature-block";
+@import "./web-templates/homepage/homepage-car-gallery-block.scss";
+@import "./web-templates/homepage/homepage-info-banner";
+
+//about us
+@import "./web-templates/about-us/about-us-hero";
+@import "./web-templates/about-us/about-us-info";
+
+//payment dispay
+@import "./web-templates/payment-details/paymentdetails";
+
+//car details
+@import "./web-templates/car_details/car_details";  
