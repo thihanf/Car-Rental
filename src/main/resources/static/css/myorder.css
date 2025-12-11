@@ -1,0 +1,454 @@
+/* orders.css */
+
+/* CSS Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+body {
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.user-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.btn-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #64748b;
+    transition: all 0.2s;
+}
+
+.btn-icon:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+    color: #475569;
+}
+
+.btn-icon i {
+    font-size: 18px;
+}
+
+/* Payment Success Card */
+.payment-success-card {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 20px;
+    padding: 32px;
+    color: white;
+    margin-bottom: 32px;
+    box-shadow: 0 10px 40px rgba(16, 185, 129, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.payment-success-card::before {
+    content: "✓";
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.payment-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.payment-title i {
+    font-size: 24px;
+}
+
+.payment-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.info-item {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.info-label {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-value {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.save-location-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 8px;
+}
+
+.save-location-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Car Info Section */
+.car-info-section {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    margin-top: 20px;
+}
+
+.car-details h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.car-details p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+.car-timer {
+    text-align: right;
+}
+
+.timer-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.timer-label {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Orders Section */
+.orders-section {
+    background: white;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.orders-count {
+    background: #f1f5f9;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+}
+
+/* Orders Table */
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.orders-table thead {
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.orders-table th {
+    padding: 16px 20px;
+    text-align: left;
+    font-weight: 600;
+    color: #64748b;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.orders-table td {
+    padding: 24px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: top;
+}
+
+.order-name {
+    font-weight: 700;
+    font-size: 18px;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.order-detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.order-detail strong {
+    color: #475569;
+    font-weight: 600;
+}
+
+.order-amount {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 12px;
+}
+
+.processing-info {
+    font-size: 16px;
+    color: #475569;
+    font-weight: 500;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.status-delivered {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.status-processing {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-icon {
+    font-size: 48px;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.empty-text {
+    color: #64748b;
+    font-size: 18px;
+}
+
+/* Footer */
+.page-footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.footer-links {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #64748b;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #475569;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+
+    .payment-success-card {
+        padding: 24px;
+    }
+
+    .payment-title {
+        font-size: 24px;
+    }
+
+    .payment-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .car-info-section {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .car-timer {
+        text-align: left;
+    }
+
+    .orders-section {
+        padding: 24px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .orders-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .orders-table th,
+    .orders-table td {
+        padding: 16px 12px;
+        font-size: 13px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* Hover Effects */
+.order-row {
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.order-row:hover {
+    background: #f8fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.payment-success-card,
+.orders-section {
+    animation: fadeIn 0.6s ease-out;
+}
