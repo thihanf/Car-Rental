@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/orders.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Page Header -->
+        <header class="page-header">
+            <h1 class="page-title">My Orders</h1>
+            <div class="user-actions">
+                <button class="btn-icon" title="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="btn-icon" title="Notifications">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <button class="btn-icon" title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Payment Success Card -->
+        <section class="payment-success-card">
+            <h2 class="payment-title">
+                <i class="fas fa-check-circle"></i>
+                Payment successful!
+            </h2>
+            
+            <div class="payment-info-grid">
+                <div class="info-item">
+                    <div class="info-label">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Location
+                    </div>
+                    <div class="info-value">26395 Littwood Road Car Park, Hopen</div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-label">
+                        <i class="fas fa-bookmark"></i>
+                        Save location
+                    </div>
+                    <div class="info-value">
+                        <button class="save-location-btn" id="saveLocationBtn">
+                            <i class="far fa-bookmark"></i>
+                            Save to favorites
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Information -->
+            <div class="car-info-section">
+                <div class="car-details">
+                    <h3>ABI2.4CD</h3>
+                    <p>Black Toyota Area</p>
+                </div>
+                <div class="car-timer">
+                    <div class="timer-value">1 hour</div>
+                    <div class="timer-label">Ends at £315 on 1 May 2023</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Orders Section -->
+        <section class="orders-section">
+            <div class="section-header">
+                <h2 class="section-title">Office/My Orders</h2>
+                <div class="orders-count">3 Orders</div>
+            </div>
+
+            <!-- Orders Table -->
+            <table class="orders-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Processing</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Order 1 -->
+                    <tr class="order-row">
+                        <td>
+                            <div class="order-name">Order #001</div>
+                            <div class="order-details">
+                                <div class="order-detail">
+                                    <i class="fas fa-barcode"></i>
+                                    Tracking: <strong>WGKHSE4334</strong>
+                                </div>
+                                <div class="order-detail">
+                                    <i class="fas fa-box"></i>
+                                    Items: <strong>3</strong>
+                                </div>
+                                <div class="order-detail">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    Total Amount: <strong>$98.00</strong>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="processing-info">06:00 - 20:00</div>
+                        </td>
+                        <td>
+                            <span class="status-badge status-delivered">
+                                <i class="fas fa-check"></i>
+                                Delivered
+                            </span>
+                        </td>
+                    </tr>
+
+                    <!-- Order 2 -->
+                    <tr class="order-row">
+                        <td>
+                            <div class="order-name">Order #002</div>
+                            <div class="order-details">
+                                <div class="order-detail">
+                                    <i class="fas fa-barcode"></i>
+                                    Tracking: <strong>FACH SHOULDER</strong>
+                                </div>
+                                <div class="order-detail">
+                                    <i class="fas fa-box"></i>
+                                    Items: <strong>3</strong>
+                                </div>
+                                <div class="order-detail">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    Total Amount: <strong>$88.00</strong>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="processing-info">06:00 - 20:00</div>
+                        </td>
+                        <td>
+                            <span class="status-badge status-processing">
+                                <i class="fas fa-clock"></i>
+                                Processing
+                            </span>
+                        </td>
+                    </tr>
+
+                    <!-- Order 3 -->
+                    <tr class="order-row">
+                        <td>
+                            <div class="order-name">Order #003</div>
+                            <div class="order-details">
+                                <div class="order-detail">
+                                    <i class="fas fa-barcode"></i>
+                                    Tracking: <strong>WGKHSE4334</strong>
+                                </div>
+                                <div class="order-detail">
+                                    <i class="fas fa-box"></i>
+                                    Items: <strong>3</strong>
+                                </div>
+                                <div class="order-detail">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    Total Amount: <strong>$98.00</strong>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="processing-info">06:00 - 20:00</div>
+                        </td>
+                        <td>
+                            <span class="status-badge status-delivered">
+                                <i class="fas fa-check"></i>
+                                Delivered
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Empty State (Hidden by default) -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-icon">
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <div class="empty-text">No orders found. Start shopping!</div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p>© 2023 My Orders Dashboard. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+                <a href="#"><i class="fas fa-shield-alt"></i> Privacy</a>
+                <a href="#"><i class="fas fa-file-contract"></i> Terms</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/orders.js"></script>
+</body>
+</html>

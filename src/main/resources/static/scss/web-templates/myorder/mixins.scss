@@ -1,0 +1,149 @@
+// _mixins.scss
+// Flexbox Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+// Grid Mixins
+@mixin grid-auto-fit($min-width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+    gap: $spacing-lg;
+}
+
+// Card Mixins
+@mixin card-base {
+    background: $bg-white;
+    border-radius: $radius-lg;
+    border: 1px solid $border-color;
+    box-shadow: $shadow-light;
+}
+
+@mixin card-hover {
+    transition: transform $transition-normal, box-shadow $transition-normal;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+}
+
+// Button Mixins
+@mixin btn-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-sm;
+    padding: $spacing-md $spacing-lg;
+    border-radius: $radius-md;
+    font-weight: $font-medium;
+    font-size: $font-size-md;
+    cursor: pointer;
+    transition: all $transition-fast;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+@mixin btn-primary {
+    @include btn-base;
+    background: $primary-color;
+    color: $text-white;
+    
+    &:hover {
+        background: $primary-dark;
+        transform: translateY(-1px);
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+@mixin btn-secondary {
+    @include btn-base;
+    background: $bg-gray;
+    color: $text-medium;
+    
+    &:hover {
+        background: darken($bg-gray, 5%);
+    }
+}
+
+// Status Badge Mixin
+@mixin status-badge($bg-color, $text-color) {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-xs;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $radius-full;
+    font-size: $font-size-xs;
+    font-weight: $font-semibold;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    background: $bg-color;
+    color: $text-color;
+}
+
+// Responsive Mixins
+@mixin mobile {
+    @media (max-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+// Animation Mixins
+@mixin fade-in($duration: 0.6s) {
+    animation: fadeIn $duration ease-out;
+}
+
+@mixin slide-in($direction: 'up', $duration: 0.3s) {
+    @if $direction == 'up' {
+        animation: slideInUp $duration ease-out;
+    } @else if $direction == 'down' {
+        animation: slideInDown $duration ease-out;
+    } @else if $direction == 'left' {
+        animation: slideInLeft $duration ease-out;
+    } @else if $direction == 'right' {
+        animation: slideInRight $duration ease-out;
+    }
+}
+
+// Glassmorphism Effect
+@mixin glassmorphism($blur: 10px, $opacity: 0.15) {
+    background: rgba($bg-white, $opacity);
+    backdrop-filter: blur($blur);
+    border: 1px solid rgba($bg-white, $opacity + 0.05);
+}
