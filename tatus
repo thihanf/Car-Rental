@@ -1,0 +1,90 @@
+*   [33m17a6dcd[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #9 from thihanf/Siluni
+[31m|[m[32m\[m  
+[31m|[m *   [33mfe4a111[m[33m ([m[1;31morigin/Siluni[m[33m)[m Merge branch 'main' into Siluni
+[31m|[m [33m|[m[31m\[m  
+[31m|[m [33m|[m[31m/[m  
+[31m|[m[31m/[m[33m|[m   
+* [33m|[m   [33m695377f[m Merge pull request #10 from thihanf/Dinula
+[35m|[m[36m\[m [33m\[m  
+[35m|[m * [33m|[m [33m3cb5981[m[33m ([m[1;31morigin/Dinula[m[33m)[m Added order confirmation page
+[35m|[m * [33m|[m [33m82c1413[m Added order confirmation page with responsive CSS
+* [36m|[m [33m|[m   [33mfe3ed26[m Merge pull request #11 from thihanf/meditha
+[1;31m|[m[1;32m\[m [36m\[m [33m\[m  
+[1;31m|[m * [36m\[m [33m\[m   [33m38047d8[m[33m ([m[1;31morigin/meditha[m[33m)[m Merge branch 'main' into meditha
+[1;31m|[m [1;33m|[m[1;31m\[m [36m\[m [33m\[m  
+[1;31m|[m [1;33m|[m[1;31m/[m [36m/[m [33m/[m  
+[1;31m|[m[1;31m/[m[1;33m|[m [36m|[m [33m|[m   
+* [1;33m|[m [36m|[m [33m|[m   [33m5c85b4f[m Merge pull request #12 from thihanf/Dinasara
+[1;35m|[m[1;36m\[m [1;33m\[m [36m\[m [33m\[m  
+[1;35m|[m * [1;33m\[m [36m\[m [33m\[m   [33mdeee567[m[33m ([m[1;31morigin/Dinasara[m[33m)[m Merge branch 'main' into Dinasara
+[1;35m|[m [31m|[m[1;35m\[m [1;33m\[m [36m\[m [33m\[m  
+[1;35m|[m [31m|[m[1;35m/[m [1;33m/[m [36m/[m [33m/[m  
+[1;35m|[m[1;35m/[m[31m|[m [1;33m|[m [36m|[m [33m|[m   
+* [31m|[m [1;33m|[m [36m|[m [33m|[m   [33mce454cb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mMyethmin[m[33m, [m[1;31morigin/Myethmin[m[33m, [m[1;32mmain[m[33m)[m Merge pull request #7 from thihanf/Thihan
+[33m|[m[34m\[m [31m\[m [1;33m\[m [36m\[m [33m\[m  
+[33m|[m * [31m\[m [1;33m\[m [36m\[m [33m\[m   [33m2fc204d[m[33m ([m[1;31morigin/Thihan[m[33m)[m Merge branch 'main' into Thihan
+[33m|[m [35m|[m[33m\[m [31m\[m [1;33m\[m [36m\[m [33m\[m  
+[33m|[m [35m|[m[33m/[m [31m/[m [1;33m/[m [36m/[m [33m/[m  
+[33m|[m[33m/[m[35m|[m [31m|[m [1;33m|[m [36m|[m [33m|[m   
+[33m|[m * [31m|[m [1;33m|[m [36m|[m [33m|[m [33m46e4352[m Linked about-us.scss to main.scss
+[33m|[m * [31m|[m [1;33m|[m [36m|[m [33m|[m [33me5a2ba6[m added about-us.html
+[33m|[m [36m|[m * [1;33m|[m [36m|[m [33m|[m [33mc709de5[m car-details
+[33m|[m [36m|[m[33m/[m [1;33m/[m [36m/[m [33m/[m  
+[33m|[m[33m/[m[36m|[m [1;33m|[m [36m|[m [33m|[m   
+* [36m|[m [1;33m|[m [36m|[m [33m|[m   [33m796cae0[m Merge pull request #4 from thihanf/Rashmie
+[1;31m|[m[1;32m\[m [36m\[m [1;33m\[m [36m\[m [33m\[m  
+[1;31m|[m * [36m\[m [1;33m\[m [36m\[m [33m\[m   [33m5163096[m[33m ([m[1;31morigin/Rashmie[m[33m)[m Merge branch 'main' into Rashmie
+[1;31m|[m [1;33m|[m[1;31m\[m [36m\[m [1;33m\[m [36m\[m [33m\[m  
+[1;31m|[m [1;33m|[m[1;31m/[m [36m/[m [1;33m/[m [36m/[m [33m/[m  
+[1;31m|[m[1;31m/[m[1;33m|[m [36m|[m [1;33m|[m [36m|[m [33m|[m   
+* [1;33m|[m [36m|[m [1;33m|[m [36m|[m [33m|[m   [33mfc8c7cb[m Merge pull request #3 from thihanf/Thihan
+[1;35m|[m[36m\[m [1;33m\[m [36m\[m [1;33m\[m [36m\[m [33m\[m  
+[1;35m|[m [36m|[m [1;33m|[m[36m/[m [1;33m/[m [36m/[m [33m/[m  
+[1;35m|[m [36m|[m[36m/[m[1;33m|[m [1;33m|[m [36m|[m [33m|[m   
+[1;35m|[m * [1;33m|[m [1;33m|[m [36m|[m [33m|[m [33me62e50c[m changed payment-display folder name
+[1;35m|[m * [1;33m|[m [1;33m|[m [36m|[m [33m|[m   [33m3705c7b[m Merge branch 'main' of https://github.com/thihanf/Car-Rental into Thihan
+[1;35m|[m [31m|[m[1;35m\[m [1;33m\[m [1;33m\[m [36m\[m [33m\[m  
+[1;35m|[m [31m|[m[1;35m/[m [1;33m/[m [1;33m/[m [36m/[m [33m/[m  
+[1;35m|[m[1;35m/[m[31m|[m [1;33m|[m [1;33m|[m [36m|[m [33m|[m   
+* [31m|[m [1;33m|[m [1;33m|[m [36m|[m [33m|[m   [33m2914f1e[m Merge pull request #2 from thihanf/Malik
+[33m|[m[34m\[m [31m\[m [1;33m\[m [1;33m\[m [36m\[m [33m\[m  
+[33m|[m * [31m|[m [1;33m|[m [1;33m|[m [36m|[m [33m|[m [33mdbb4b7d[m[33m ([m[1;31morigin/Malik[m[33m)[m Payment Details Page
+[33m|[m [36m|[m [31m|[m[36m_[m[1;33m|[m[36m_[m[1;33m|[m[36m/[m [33m/[m  
+[33m|[m [36m|[m[36m/[m[31m|[m [1;33m|[m [1;33m|[m [33m|[m   
+* [36m|[m [31m|[m [1;33m|[m [1;33m|[m [33m|[m   [33m80f42e6[m Merge PR #1: Added Web Template folder
+[35m|[m[36m\[m [36m\[m [31m\[m [1;33m\[m [1;33m\[m [33m\[m  
+[35m|[m [36m|[m [36m|[m * [1;33m|[m [1;33m|[m [33m|[m [33m6f215e3[m navbar,footer,homepage files added
+[35m|[m [36m|[m [36m|[m[36m/[m [1;33m/[m [1;33m/[m [33m/[m  
+[35m|[m [36m|[m[36m/[m[36m|[m [1;33m|[m [1;33m|[m [33m|[m   
+[35m|[m * [36m|[m [1;33m|[m [1;33m|[m [33m|[m   [33mc2ab1b0[m Merged main into Thihan and resolved conflicts for Pull Request
+[35m|[m [1;31m|[m[35m\[m [36m\[m [1;33m\[m [1;33m\[m [33m\[m  
+[35m|[m [1;31m|[m[35m/[m [36m/[m [1;33m/[m [1;33m/[m [33m/[m  
+[35m|[m[35m/[m[1;31m|[m [36m|[m [1;33m|[m [1;33m|[m [33m|[m   
+* [1;31m|[m [36m|[m [1;33m|[m [1;33m|[m [33m|[m   [33mae1ae1b[m Merged remote main branch with local main, resolving .gitignore conflict
+[1;33m|[m[36m\[m [1;31m\[m [36m\[m [1;33m\[m [1;33m\[m [33m\[m  
+[1;33m|[m [36m|[m [1;31m|[m[36m/[m [1;33m/[m [1;33m/[m [33m/[m  
+[1;33m|[m [36m|[m[36m/[m[1;31m|[m [1;33m|[m [1;33m|[m [33m|[m   
+[1;33m|[m [36m|[m * [1;33m|[m [1;33m|[m [33m|[m   [33m6e21a8f[m Merged remote branch origin/Thihan with local history
+[1;33m|[m [36m|[m [1;35m|[m[36m\[m [1;33m\[m [1;33m\[m [33m\[m  
+[1;33m|[m [36m|[m [1;35m|[m[36m/[m [1;33m/[m [1;33m/[m [33m/[m  
+[1;33m|[m [36m|[m[36m/[m[1;35m|[m [1;33m|[m [1;33m|[m [33m|[m   
+[1;33m|[m [36m|[m * [1;33m|[m [1;33m|[m [33m|[m [33m13acf07[m Added web-template folder
+[1;33m|[m [36m|[m * [1;33m|[m [1;33m|[m [33m|[m [33m50ab91d[m Added web-template folder
+[1;33m|[m [36m|[m[1;33m/[m [1;33m/[m [1;33m/[m [33m/[m  
+[1;33m|[m[1;33m/[m[36m|[m [1;33m|[m [1;33m|[m [33m|[m   
+* [36m|[m [1;33m|[m [1;33m|[m [33m|[m [33mece4a76[m Initial commit
+ [36m/[m [1;33m/[m [1;33m/[m [33m/[m  
+[36m|[m * [1;33m|[m [33m|[m [33m3e55979[m Remove target folder and update .gitignore
+[36m|[m * [1;33m|[m [33m|[m [33mb679cb3[m Restore stashed changes and add new UI files
+[36m|[m[36m/[m [1;33m/[m [33m/[m  
+[36m|[m * [33m|[m   [33m018d176[m Merge remote changes
+[36m|[m [31m|[m[32m\[m [33m\[m  
+[36m|[m [31m|[m * [33m|[m [33m99420f2[m contactus
+[36m|[m * [32m|[m [33m|[m [33m9c6a064[m Renamed contact files and added SCSS structure
+[36m|[m [32m|[m[32m/[m [33m/[m  
+[36m|[m * [33m|[m [33mbe37f14[m[33m ([m[1;32mmeditha[m[33m)[m Create contactus
+[36m|[m * [33m|[m [33m88dc9f7[m my changes
+[36m|[m[36m/[m [33m/[m  
+[36m|[m * [33mb4577a9[m Vehicle Gallery
+[36m|[m[36m/[m  
+* [33m6caa682[m[33m ([m[1;31morigin/Kaveeshan[m[33m)[m Initial commit
