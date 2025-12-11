@@ -1,0 +1,17 @@
+body {
+  background-color: black;
+}
+
+.car-details.content-width {
+  display: inline-flex;
+}
+
+.left_container {
+  display: flex;
+  padding: 60px 732px 363px 72px;
+}
+
+.right_container {
+  display: flex;
+  padding: 60px 72px 60px 732px;
+}/*# sourceMappingURL=car_details.css.map */

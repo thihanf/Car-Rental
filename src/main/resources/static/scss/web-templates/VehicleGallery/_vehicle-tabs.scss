@@ -1,0 +1,91 @@
+.vgheader{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items:center;
+}
+
+.head {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  @include tablet-landscape {
+
+  }
+}
+
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  align-items: center;
+  margin-top:20px;
+  flex-wrap:wrap;
+
+
+    @include tablet-landscape {
+    font-size: 40px;
+    line-height: normal;
+    text-align: center;
+    }
+}
+
+.btn-primary-1 {
+  background-color: $primary-color;
+  color: white;
+  width:120px ;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family:$primary-font;
+  padding: 10px 4px;
+  border-radius:50px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;     
+
+    @include tablet-landscape {
+    width:120px;
+    max-width: 368px;
+    border-radius: 50px;
+    font-size: 14px;
+    gap: 8px;
+  }
+
+}
+
+.btn-secondary-2 {
+  background-color:#F9F9F9;
+  color: rgb(31, 11, 11);
+  width: 120px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: $primary-font;
+  padding: 10px 4px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;    
+
+    @include tablet-landscape {
+    width: 120px;
+    max-width: 368px;
+    border-radius: 50px;
+    font-size: 14px;
+    gap: 8px;
+  }
+}
+
+.vehi {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
