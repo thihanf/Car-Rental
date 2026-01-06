@@ -4,7 +4,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-block: 40px;
+    padding-block-start: 15px;
+    padding-block-end: 10px;
     gap: 10px;
     @include tablet-landscape {
       padding-block: 69px;

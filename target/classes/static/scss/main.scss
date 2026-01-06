@@ -1,7 +1,22 @@
-//common
+/* Bootstrap heading neutralizer */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  all: unset;
+  display: block;
+}
+
 @import "mix-ins/variables";
 @import "mix-ins/mixin";
 @import "mix-ins/styleguide";
+
+@import "web-templates/auth-base/auth-base";
+@import "web-templates/signup/signup";
+@import "web-templates/signin/signin";
+@import "web-templates/forgotpw/forgotpw";
 
 //navbar & footer
 @import "./web-templates/navbar&footer/navbar";
@@ -25,6 +40,11 @@
 //about us
 @import "./web-templates/about-us/about-us-hero";
 @import "./web-templates/about-us/about-us-info";
+@import "./web-templates/about-us/about-us-stats";
+@import "./web-templates/about-us/about-us-feature";
+@import "./web-templates/about-us/about-us-review";
+@import "./web-templates/about-us/about-us-accordian";
+@import "./web-templates/about-us/about-us-banner";
 
 //payment dispay
 @import "./web-templates/payment-details/paymentdetails";
