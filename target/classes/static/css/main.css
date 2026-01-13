@@ -2925,9 +2925,8 @@ h6 {
   justify-content: center;
   align-items: center;
 }
-
-.color {
-  background-color: aqua;
+.homepage-car-gallery-block .btn-link {
+  text-decoration: none;
 }
 
 .homepage-info-banner .main-wrapper {
@@ -3007,6 +3006,44 @@ h6 {
 }
 .homepage-info-banner .stat-header {
   font-size: 18px;
+}
+
+.car-card {
+  font-family: inherit;
+  /* ---------- TITLE ---------- */
+  /* ---------- PRICE ---------- */
+  /* ---------- FEATURES ---------- */
+  /* ---------- BUTTON FIX ---------- */
+}
+.car-card .h2-title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.car-card .p-price-tag {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #5b3df5;
+}
+.car-card .per-day-text {
+  font-size: 0.85rem;
+}
+.car-card .features-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+.car-card .features-row .feature-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+.car-card .btn-primary {
+  width: auto;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  border-radius: 14px;
 }
 
 .about-us-hero .main-wrapper {

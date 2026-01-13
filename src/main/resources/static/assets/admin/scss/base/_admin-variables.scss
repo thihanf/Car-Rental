@@ -1,0 +1,58 @@
+/* ================================
+   IMPORT SHARED FRONTEND TOKENS
+   ================================ */
+@import "../../../../scss/mix-ins/mixin";
+@import "../../../../scss/mix-ins/variables";
+@import "../../../../scss/mix-ins/styleguide";
+
+/* ================================
+   ADMIN COLOR SYSTEM
+   ================================ */
+
+/* Sidebar */
+$admin-sidebar-bg: #5aa2d6; // matches Figma blue
+$admin-sidebar-text: #ffffff;
+$admin-sidebar-hover: rgba(255, 255, 255, 0.15);
+
+/* Main background */
+$admin-bg: #f7f8fa;
+$admin-card-bg: #ffffff;
+
+/* Accent cards */
+$admin-green: #e6f6ea;
+$admin-yellow: #fdf4e6;
+$admin-pink: #fbeaea;
+$admin-purple: #e8eaf7;
+
+/* Text */
+$admin-title-color: #111827;
+$admin-muted-text: #6b7280;
+
+/* Borders & shadows */
+$admin-border-radius: 16px;
+$admin-card-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+
+/* ================================
+   ADMIN LAYOUT SIZES
+   ================================ */
+
+$admin-sidebar-width: 260px;
+$admin-header-height: 72px;
+$content-max-width: 1400px;
+
+/* ================================
+   TYPOGRAPHY (Admin-specific)
+   ================================ */
+
+$admin-font-family: "Metropolis", sans-serif;
+$admin-title-size: 22px;
+$admin-card-title-size: 14px;
+$admin-stat-size: 24px;
+
+/* ================================
+   Z-INDEX SYSTEM
+   ================================ */
+
+$z-sidebar: 100;
+$z-header: 200;
+$z-dropdown: 300;

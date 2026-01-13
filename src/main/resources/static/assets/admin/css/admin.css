@@ -1,0 +1,535 @@
+/* shared design tokens */
+/* ================================
+   IMPORT SHARED FRONTEND TOKENS
+   ================================ */
+.h1-title {
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: black;
+  font-weight: bold;
+}
+@media (min-width: 992px) {
+  .h1-title {
+    font-size: 50px;
+    line-height: normal;
+  }
+}
+
+.h1-title-hero {
+  font-family: "Work Sans", sans-serif;
+  font-size: 32px;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: black;
+  font-weight: bold;
+}
+@media (min-width: 992px) {
+  .h1-title-hero {
+    font-size: 60px;
+    line-height: normal;
+  }
+}
+
+.h1-score {
+  font-family: "Work Sans", sans-serif;
+  font-size: 40px;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: black;
+  font-weight: bold;
+}
+@media (min-width: 992px) {
+  .h1-score {
+    font-size: 80px;
+    line-height: normal;
+  }
+}
+
+.h2-title {
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: black;
+  font-weight: bold;
+}
+@media (min-width: 992px) {
+  .h2-title {
+    font-size: 40px;
+    line-height: normal;
+  }
+}
+
+.h3-title-form-title {
+  font-family: "Work Sans", sans-serif;
+  font-size: 15px;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: black;
+  font-weight: bold;
+}
+@media (min-width: 992px) {
+  .h3-title-form-title {
+    font-size: 28px;
+    line-height: normal;
+  }
+}
+
+.h3-title {
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0px;
+  color: black;
+  font-weight: bold;
+}
+@media (min-width: 992px) {
+  .h3-title {
+    font-size: 24px;
+    line-height: normal;
+  }
+}
+
+.p-price-tag {
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: rgb(89, 55, 224);
+  font-weight: 600;
+}
+@media (min-width: 992px) {
+  .p-price-tag {
+    font-size: 24px;
+    line-height: normal;
+  }
+}
+
+.p-body-text {
+  font-family: "Work Sans", sans-serif;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: black;
+}
+@media (min-width: 992px) {
+  .p-body-text {
+    font-size: 16px;
+    line-height: normal;
+  }
+}
+
+.p-body-text-gray {
+  font-family: "Work Sans", sans-serif;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: black;
+  opacity: 0.6;
+}
+@media (min-width: 992px) {
+  .p-body-text-gray {
+    font-size: 16px;
+    line-height: normal;
+  }
+}
+
+/* Neutralize Bootstrap heading styles */
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-primary {
+  background-color: rgb(89, 55, 224);
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Work Sans", sans-serif;
+  padding: 15.5px 20px;
+}
+@media (min-width: 992px) {
+  .btn-primary {
+    width: 100%;
+    max-width: 368px;
+    border-radius: 12px;
+    font-size: 16px;
+  }
+}
+
+.btn-secondary {
+  background-color: rgb(255, 158, 12);
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Work Sans", sans-serif;
+  padding: 13px 28px;
+}
+@media (min-width: 992px) {
+  .btn-secondary {
+    width: 100%;
+    border-radius: 12px;
+    font-size: 16px;
+  }
+}
+
+.content-width {
+  width: calc(100% - 40px);
+  margin-inline: auto;
+}
+@media (min-width: 768px) {
+  .content-width {
+    width: calc(100% - 64px);
+    max-width: 696px;
+  }
+}
+@media (min-width: 992px) {
+  .content-width {
+    width: calc(100% - 144px);
+    max-width: 1296px;
+  }
+}
+
+.car-card {
+  border: 1px solid rgb(229, 229, 229);
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+@media (min-width: 992px) {
+  .car-card {
+    padding: 24px;
+    gap: 24px;
+  }
+}
+.car-card .image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 368/232;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .car-card .image-wrap {
+    aspect-ratio: 368/240;
+  }
+}
+.car-card .image-wrap .picture,
+.car-card .image-wrap .image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.car-card .image-wrap .image {
+  object-fit: cover;
+}
+.car-card .car-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+}
+.car-card .car-details .title-and-price {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.car-card .car-details .top-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.car-card .car-details .bottom-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.car-card .car-details .per-day-text {
+  font-size: 12px;
+}
+@media (min-width: 992px) {
+  .car-card .car-details .per-day-text {
+    font-size: 14px;
+  }
+}
+.car-card .car-details .features-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+@media (min-width: 992px) {
+  .car-card .car-details .features-row {
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+}
+.car-card .car-details .features-row .feature-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+.car-card .car-details .features-row .feature-item .feature-icon {
+  width: 20px;
+  height: 20px;
+  color: black;
+}
+@media (min-width: 992px) {
+  .car-card .car-details .features-row .feature-item .feature-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+.car-card .car-details .btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================================
+   ADMIN COLOR SYSTEM
+   ================================ */
+/* Sidebar */
+/* Main background */
+/* Accent cards */
+/* Text */
+/* Borders & shadows */
+/* ================================
+   ADMIN LAYOUT SIZES
+   ================================ */
+/* ================================
+   TYPOGRAPHY (Admin-specific)
+   ================================ */
+/* ================================
+   Z-INDEX SYSTEM
+   ================================ */
+/* admin styles */
+.admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+}
+.admin-navbar .nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.admin-navbar .nav-actions input {
+  border: none;
+  background: #f0f1f6;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+.admin-navbar .nav-actions .icon {
+  cursor: pointer;
+}
+.admin-navbar .nav-actions img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.sidebar {
+  width: 250px;
+  background: #953553;
+  color: #fff;
+  border-radius: 24px;
+  margin: 20px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sidebar .title-color {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.sidebar a {
+  color: #eaf2fb;
+  text-decoration: none;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sidebar a.active {
+  font-weight: 600;
+  color: #ffffff;
+}
+.sidebar .sidebar-footer {
+  margin-top: auto;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.admin-footer {
+  padding: 16px 32px;
+  font-size: 13px;
+  color: #777;
+}
+
+.stats .main-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.stats .stat-card-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 220px;
+  height: 120px;
+  border-radius: 20px;
+}
+.stats .stat-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-block-start: 30px;
+  padding-block-end: 20px;
+  padding-inline-start: 25px;
+  padding-inline-end: 30px;
+  white-space: nowrap;
+}
+.stats .stat-header {
+  font-size: 14px;
+}
+.stats .stat-vehicle {
+  background-color: rgb(221, 239, 224);
+  margin-inline-end: 30px;
+}
+.stats .stat-customers {
+  background-color: beige;
+  margin-inline-end: 30px;
+}
+.stats .stat-bookings {
+  background-color: lightcoral;
+}
+.stats .icon-wrapper {
+  padding-block-start: 20px;
+  padding-block-end: 70px;
+  padding-inline-start: 0px;
+  padding-inline-end: 0px;
+}
+
+.admin-layout {
+  display: flex;
+  background: #f6f7fb;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.admin-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-content {
+  margin-left: 48px;
+  margin-right: 48px;
+}
+
+/* admin pages */
+.activity-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+.activity-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.table {
+  font-size: 14px;
+}
+
+.card {
+  border-radius: 16px;
+}
+
+.badge {
+  padding: 6px 10px;
+  font-weight: 500;
+}
+
+/* Align buttons with inputs */
+.btn-add {
+  height: 38px;
+  padding: 0 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* Green */
+.btn-add {
+  background: #198754;
+  color: #fff;
+  border: none;
+}
+
+.btn-add:hover {
+  background: #157347;
+}
+
+/* ================= STATUS BADGES ================= */
+.status-badge {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.status-available {
+  background-color: #198754;
+}
+
+.status-booked {
+  background-color: #dc3545;
+}
+
+.status-maintenance {
+  background-color: #6c757d;
+}
+
+/*# sourceMappingURL=admin.css.map */

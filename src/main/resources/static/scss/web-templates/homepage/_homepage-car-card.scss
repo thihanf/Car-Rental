@@ -1,0 +1,44 @@
+.car-card {
+  font-family: inherit;
+
+  /* ---------- TITLE ---------- */
+  .h2-title {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  /* ---------- PRICE ---------- */
+  .p-price-tag {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #5b3df5;
+  }
+
+  .per-day-text {
+    font-size: 0.85rem;
+  }
+
+  /* ---------- FEATURES ---------- */
+  .features-row {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+    }
+  }
+
+  /* ---------- BUTTON FIX ---------- */
+
+  .btn-primary {
+    width: auto; // ⬅️ IMPORTANT
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    border-radius: 14px;
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  th:replace="admin/layout/admin-layout :: layout(~{::content})"
+>
+  <div th:fragment="content">
+    <!-- Stat cards -->
+    <section class="stats">
+      <div class="main-wrapper">
+        <div class="stat-card-wrapper stat-vehicle">
+          <div class="stat-text-wrapper">
+            <p class="p-body-text stat-header">Total Vehicles</p>
+            <h3 class="h3-title">8</h3>
+          </div>
+          <div class="icon-wrapper">
+            <img class="icon" src="/assets/admin/icons/dashboard/Vector.svg" />
+          </div>
+        </div>
+
+        <div class="stat-card-wrapper stat-customers">
+          <div class="stat-text-wrapper">
+            <p class="p-body-text stat-header">Total Vehicles</p>
+            <h3 class="h3-title">8</h3>
+          </div>
+          <div class="icon-wrapper">
+            <img class="icon" src="/assets/admin/icons/dashboard/Vector.svg" />
+          </div>
+        </div>
+
+        <div class="stat-card-wrapper stat-bookings">
+          <div class="stat-text-wrapper">
+            <p class="p-body-text stat-header">Total Vehicles</p>
+            <h3 class="h3-title">8</h3>
+          </div>
+          <div class="icon-wrapper">
+            <img class="icon" src="/assets/admin/icons/dashboard/Vector.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <!-- Activity chart -->
+    <section class="activity-card"></section>
+
+    <!-- Bottom cards -->
+    <section class="dashboard-bottom"></section>
+  </div>
+</html>

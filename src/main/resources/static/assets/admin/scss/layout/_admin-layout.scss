@@ -1,0 +1,18 @@
+.admin-layout {
+  display: flex;
+  background: #f6f7fb;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.admin-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-content {
+  margin-left: 48px;
+  margin-right: 48px;
+}

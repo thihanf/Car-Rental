@@ -1,0 +1,57 @@
+/* shared design tokens */
+@import "base/admin-variables";
+
+/* admin styles */
+@import "./layout/layout";
+@import "./layout/navbar";
+@import "./layout/sidebar";
+@import "./layout/footer";
+@import "./layout/cards";
+@import "./layout/admin-layout";
+
+/* admin pages */
+@import "./pages/dashboard";
+@import "./pages/vehicles";
+
+/* Align buttons with inputs */
+.btn-add {
+  height: 38px; // exact Bootstrap input height
+  padding: 0 1rem; // tighter horizontal padding
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* Green */
+.btn-add {
+  background: #198754;
+  color: #fff;
+  border: none;
+}
+
+.btn-add:hover {
+  background: #157347;
+}
+
+/* ================= STATUS BADGES ================= */
+.status-badge {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.status-available {
+  background-color: #198754; // green
+}
+
+.status-booked {
+  background-color: #dc3545; // red
+}
+
+.status-maintenance {
+  background-color: #6c757d; // gray
+}

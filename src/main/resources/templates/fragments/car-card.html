@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <div class="car-card" th:fragment="carCard(car)">
+    <div class="image-wrap">
+      <img th:src="@{${car.imageUrl}}" class="image" alt="Car image" />
+    </div>
+
+    <div class="car-details">
+      <div class="title-and-price">
+        <div class="top-wrap">
+          <h2 class="h2-title" th:text="${car.brand}">Mercedes</h2>
+          <p class="p-price-tag">$<span th:text="${car.rentPrice}">60</span></p>
+        </div>
+
+        <div class="bottom-wrap">
+          <p class="p-body-text-gray" th:text="${car.type}">Sedan</p>
+          <p class="p-body-text-gray">per day</p>
+        </div>
+      </div>
+
+      <div class="features-row">
+        <div class="feature-item">
+          <img src="/icons/vehicle-card/gearshift.svg" />
+          <span th:text="${car.transmission}">Manual</span>
+        </div>
+
+        <div class="feature-item">
+          <img src="/icons/vehicle-card/gas.svg" />
+          <span th:text="${car.fuelType}">Petrol</span>
+        </div>
+
+        <div class="feature-item" th:if="${car.airConditioner}">
+          <img src="/icons/vehicle-card/ac.svg" />
+          <span>Air Conditioner</span>
+        </div>
+      </div>
+
+      <div class="btn-container">
+        <a
+          th:href="@{/cars/{id}(id=${car.carId})}"
+          class="btn-primary btn-link"
+        >
+          View Details
+        </a>
+      </div>
+    </div>
+  </div>
+</html>

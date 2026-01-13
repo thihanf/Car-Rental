@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
   </head>
   <body>
-    <!----Homepage hero block starts here----->
+    <!-- Homepage hero block starts here -->
     <section class="homepage-hero">
       <div class="content-width wrap-all">
         <div class="inner-wrap">
@@ -25,7 +25,7 @@
                 <button class="btn-secondary">View all Cars</button>
               </div>
             </div>
-            <!-----------form styles start here------------->
+            <!-- form styles start here -->
             <div class="form-wrap">
               <h3 class="h3-title-form-title">Book your car</h3>
               <div class="input-label-wrapper">
@@ -79,20 +79,20 @@
               </div>
               <button class="btn-secondary">Book now</button>
             </div>
-            <!--------form styles ends here----------->
+            <!-- form styles ends here -->
           </div>
         </div>
       </div>
     </section>
-    <!-------------Homepage hero block ends here-------------->
-    <!--------------Homepage-info block starts here------------->
+    <!-- Homepage hero block ends here -->
+    <!-- Homepage-info block starts here -->
     <section class="homepage-info-block">
       <div class="content-width">
         <div class="main-wrapper">
           <div class="info-wrapper">
             <div class="info-icon-wrapper">
               <img
-                src="./icons/homepage/location-pin-svgrepo-com (3).svg"
+                src="./icons/homepage/location-svgrepo-com.svg"
                 width="64"
                 height="64"
                 class="info-icon"
@@ -140,8 +140,8 @@
         </div>
       </div>
     </section>
-    <!------Homepage-info block ends here --------->
-    <!------Homepage-feature block starts here----->
+    <!--Homepage-info block ends here -->
+    <!--Homepage-feature block starts here -->
     <section class="homepage-feature-block">
       <div class="content-width">
         <div class="main-wrapper">
@@ -204,11 +204,11 @@
               </p>
             </div>
           </div>
-          <!-------feature-items block ends here-------->
+          <!--feature-items block ends here-->
         </div>
       </div>
     </section>
-    <!------Homepage-feature block ends here----->
+    <!--Homepage-feature block ends here-->
 
     <!--Homepage-car-gallery-block starts here-->
     <section class="homepage-car-gallery-block">
@@ -223,66 +223,9 @@
                <img class="arrow-icon" src="./icons/homepage/arrow-right-svgrepo-com.svg">
             </div>
           </div>
-        <div class="car-gallery-wrapper">
-        <div class="car-card">
-          <div class="image-wrap">
-            <picture class="picture">
-              <source srcset="./images/mercedes.jpg" />
-              <img
-                class="image"
-                src="./images/mercedes.jpg"
-                alt="Car silhouette"
-              />
-            </picture>
-          </div>
-          <div class="car-details">
-            <div class="title-and-price">
-              <div class="top-wrap">
-                <h2 class="h2-title car-type" class="car-brand">Mercedes</h2>
-                <p class="p-price-tag price-size">$60</p>
-              </div>
-              <div class="bottom-wrap">
-                <p class="p-body-text-gray" class="car-type">Sedan</p>
-                <p class="p-body-text-gray" class="per-day-text">per day</p>
-              </div>
-            </div>
-
-              <div class="features-row">
-                <div class="feature-item">
-                  <img
-                    src="./icons/vehicle-card/gearshift-shift-svgrepo-com.svg"
-                    width="24"
-                    height="24"
-                    class="feature-icon"
-                    alt="Gearshift Icon"
-                  />
-                  <span class="p-body-text-gray">Manual</span>
-                </div>
-                <div class="feature-item">
-                  <img
-                    src="./icons/vehicle-card/gas-station-svgrepo-com.svg"
-                    width="24"
-                    height="24"
-                    class="feature-icon"
-                    alt="Gearshift Icon"
-                    />
-                    <span class="p-body-text-gray">PB 95</span>
-                  </div>
-                  <div class="feature-item">
-                    <img
-                      src="./icons/vehicle-card/christmas-snow-flake-winter-cold-svgrepo-com.svg"
-                      width="24"
-                      height="24"
-                      class="feature-icon"
-                      alt="Gearshift Icon"
-                    />
-                    <span class="p-body-text-gray">Air Conditioner</span>
-                  </div>
-                </div>
-                <div class="btn-container">
-                  <button class="btn-primary">View Details</button>
-                </div>
-              </div>
+          <div class="car-gallery-wrapper">
+             <div th:each="car : ${cars}">
+              <div th:replace="fragments/car-card :: carCard(${car})"></div>
             </div>
           </div>
         </div>

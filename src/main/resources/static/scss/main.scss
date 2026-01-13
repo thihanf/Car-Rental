@@ -9,10 +9,13 @@ h6 {
   display: block;
 }
 
+//common
 @import "mix-ins/variables";
 @import "mix-ins/mixin";
+
 @import "mix-ins/styleguide";
 
+//sign-in & sign-up
 @import "web-templates/auth-base/auth-base";
 @import "web-templates/signup/signup";
 @import "web-templates/signin/signin";
@@ -36,6 +39,7 @@ h6 {
 @import "./web-templates/homepage/homepage-feature-block";
 @import "./web-templates/homepage/homepage-car-gallery-block.scss";
 @import "./web-templates/homepage/homepage-info-banner";
+@import "web-templates/homepage/homepage-car-card";
 
 //about us
 @import "./web-templates/about-us/about-us-hero";
