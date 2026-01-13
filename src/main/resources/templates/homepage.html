@@ -224,7 +224,7 @@
             </div>
           </div>
           <div class="car-gallery-wrapper">
-             <div th:each="car : ${cars}">
+             <div th:each="car : ${cars}" th:if="${stat.index < 3}">
               <div th:replace="fragments/car-card :: carCard(${car})"></div>
             </div>
           </div>

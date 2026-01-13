@@ -24,9 +24,6 @@ public class Car {
     @Column(name = "type", length = 30)
     private String type;
 
-    @Column(name = "base_price", precision = 38, scale = 2)
-    private BigDecimal basePrice;
-
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
     private CarStatus status;
@@ -42,6 +39,10 @@ public class Car {
 
     @Column(name = "air_conditioner")
     private Boolean airConditioner;
+
+    @Column(name = "seats")
+    private Integer seats;
+
 
     // ---------------- Constructors ----------------
 
@@ -132,4 +133,13 @@ public class Car {
     public void setAirConditioner(Boolean airConditioner) {
         this.airConditioner = airConditioner;
     }
+
+    public Integer getSeats() {
+    return seats;
+}
+
+public void setSeats(Integer seats) {
+    this.seats = seats;
+}
+
 }
