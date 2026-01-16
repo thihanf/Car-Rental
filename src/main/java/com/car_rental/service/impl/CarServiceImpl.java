@@ -38,4 +38,9 @@ public class CarServiceImpl implements CarService {
     public Car saveCar(Car car) {
         return carRepository.save(car);
     }
+
+    @Override
+    public List<Car> getCarsByType(String type) {
+    return carRepository.findByTypeAndStatus(type, CarStatus.AVAILABLE);
+}
 }

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  th:replace="~{admin/layout/admin-layout :: layout(~{::section})}"
+>
+  <section>
+    <div class="container-fluid mt-4">
+      <h3 class="h3-title mb-4">Users</h3>
+
+      <!-- ================= HEADER ================= -->
+      <div class="card shadow-sm rounded-lg mb-3 border-0">
+        <div class="card-body p-3">
+          <div class="row g-3 align-items-end">
+            <!-- Search -->
+            <div class="col-lg-5 col-md-6">
+              <label class="text-body-secondary">User</label>
+              <input
+                type="text"
+                id="userSearchInput"
+                class="form-control"
+                placeholder="Search by username or email..."
+                onkeyup="applyUserFilters()"
+              />
+            </div>
+
+            <!-- Role -->
+            <div class="col-lg-3 col-md-6">
+              <label class="text-body-secondary">Role</label>
+              <select
+                id="roleFilter"
+                class="form-control"
+                onchange="applyUserFilters()"
+              >
+                <option value="">All</option>
+                <option value="ROLE_ADMIN">Admin</option>
+                <option value="ROLE_EMPLOYEE">Employee</option>
+              </select>
+            </div>
+
+            <!-- Status -->
+            <div class="col-lg-2 col-md-6">
+              <label class="text-body-secondary">Status</label>
+              <select
+                id="statusFilter"
+                class="form-control"
+                onchange="applyUserFilters()"
+              >
+                <option value="">All</option>
+                <option value="ACTIVE">Active</option>
+                <option value="BLOCKED">Blocked</option>
+              </select>
+            </div>
+
+            <!-- Add Button -->
+            <div class="col-lg-2 d-flex justify-content-end">
+              <a th:href="@{/admin/users/add}" class="btn btn-add">
+                + Add User
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= TABLE ================= -->
+      <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-body p-3">
+          <table
+            class="table table-borderless align-middle mb-0"
+            style="border-collapse: separate; border-spacing: 0 10px"
+          >
+            <thead>
+              <tr class="bg-dark text-white">
+                <th class="ps-4">Username</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Role</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody id="userTable">
+              <tr th:each="user : ${users}" class="bg-light shadow-sm">
+                <td
+                  class="ps-4 rounded-start fw-medium"
+                  th:text="${user.username}"
+                >
+                  admin
+                </td>
+
+                <td th:text="${user.email}">admin@email.com</td>
+
+                <td th:text="${user.phoneNo}">0771234567</td>
+
+                <td>
+                  <span
+                    class="badge bg-secondary text-dark"
+                    th:text="${user.role}"
+                  >
+                    ADMIN
+                  </span>
+                </td>
+
+                <td class="rounded-end">
+                  <span
+                    class="badge"
+                    th:classappend="${user.status.name() == 'ACTIVE'} ? ' bg-success' : ' bg-danger'"
+                    th:text="${user.status}"
+                  >
+                    ACTIVE
+                  </span>
+                </td>
+              </tr>
+
+              <tr th:if="${#lists.isEmpty(users)}">
+                <td colspan="6" class="text-center text-muted py-4">
+                  No users found
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="d-flex justify-content-center mt-3">
+            <button
+              id="userToggleBtn"
+              class="btn btn-outline-secondary btn-sm"
+              onclick="toggleUserRows()"
+            >
+              Show More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</html>

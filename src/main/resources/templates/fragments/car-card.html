@@ -1,4 +1,4 @@
-<div class="car-card" th:fragment="carCard(car)">
+<div class="car-card" th:fragment="carCard(car,startDate,endDate)">
   <div class="image-wrap">
     <img th:src="${car.imageUrl}" class="image" alt="Car image" />
   </div>
@@ -20,24 +20,37 @@
 
     <div class="features-row">
       <div class="feature-item">
-        <img th:src="@{/icons/vehicle-card/gearshift.svg}" />
+        <img
+          th:src="@{/icons/vehicle-card/gearshift-shift-svgrepo-com.svg}"
+          style="width: 24px; height: 24px; object-fit: contain; display: block"
+        />
         <span th:text="${car.transmission}">Manual</span>
       </div>
 
       <div class="feature-item">
-        <img th:src="@{/icons/vehicle-card/gas.svg}" />
+        <img
+          th:src="@{/icons/vehicle-card/gas-station-svgrepo-com.svg}"
+          style="width: 24px; height: 24px; object-fit: contain; display: block"
+        />
         <span th:text="${car.fuelType}">Petrol</span>
       </div>
 
       <div class="feature-item" th:if="${car.airConditioner}">
-        <img th:src="@{/icons/vehicle-card/ac.svg}" />
+        <img
+          th:src="@{/icons/vehicle-card/air-conditioner.svg}"
+          style="width: 24px; height: 24px; object-fit: contain; display: block"
+        />
         <span>Air Conditioner</span>
       </div>
     </div>
 
     <div class="btn-container">
-      <a th:href="@{/cars/{id}(id=${car.carId})}" class="btn-primary btn-link">
-        View Details
+      <a
+        th:href="@{/details(id=${car.carId}, start=${startDate}, end=${endDate})}"
+        class="btn-primary car-btn"
+        style="text-align: center; text-decoration: none; display: block"
+      >
+        Rent car
       </a>
     </div>
   </div>

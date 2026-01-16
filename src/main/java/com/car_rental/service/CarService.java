@@ -13,4 +13,6 @@ public interface CarService {
     Car getCarById(Long id);
 
     Car saveCar(Car car);
+
+    List<Car> getCarsByType(String type);
 }

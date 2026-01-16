@@ -5,6 +5,9 @@ import java.nio.file.*;
 import java.util.List;
 import java.util.UUID;
 
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -21,14 +24,17 @@ public class CarController {
 
     public CarController(CarService carService) {
         this.carService = carService;
+
     }
 
     // ================= ADMIN VEHICLES TABLE =================
     @GetMapping
     public String listVehicles(Model model) {
         model.addAttribute("vehicles", carService.getAllCars());
+        model.addAttribute("activePage", "vehicles");
         return "admin/vehicles";
-    }
+}
+
 
     // ================= SHOW ADD VEHICLE FORM =================
     @GetMapping("/add")
@@ -87,19 +93,12 @@ public class CarController {
         return "redirect:/admin/vehicles";
     }
 
-    // ================= PUBLIC CARS PAGE =================
+ 
     @GetMapping("/cars")
     public String carsPage(Model model) {
         model.addAttribute("cars", carService.getAllAvailableCars());
         return "cars";
     }
 
-    // ================= HOMEPAGE =================
-    @GetMapping("/")
-    public String home(Model model) {
-        model.addAttribute("cars", carService.getAllAvailableCars());
-        return "homepage";
-    }
-
-
 }
+

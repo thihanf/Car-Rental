@@ -1,6 +1,7 @@
 package com.car_rental.enums;
 
 public enum Role {
-    USER,
-    ADMIN
+   ROLE_ADMIN,
+    ROLE_EMPLOYEE,
+    ROLE_CUSTOMER
 }

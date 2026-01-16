@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation - ParkEasy</title>
+    <link rel="stylesheet" href="/css/payment-confirmation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="header">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h1>Payment successful!</h1>
+            <p class="order-number">Order #26205</p>
+        </div>
+
+        <div class="content">
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-map-marker-alt"></i> Parking Details</h2>
+                </div>
+                <div class="card-body">
+                    <div class="detail-row">
+                        <div class="detail-label">Location</div>
+                        <div class="detail-value">Littleroot Road Car Park, Hoenn</div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <div class="detail-label">Address</div>
+                        <div class="detail-value">AB12 4CD</div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <div class="detail-label">Vehicle</div>
+                        <div class="detail-value">Black Toyota Yaris</div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <div class="detail-label">Duration</div>
+                        <div class="detail-value">1 hour</div>
+                    </div>
+                    
+                    <div class="detail-row highlight">
+                        <div class="detail-label">Ends at</div>
+                        <div class="detail-value">12:15 on 1 May 2023</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button class="btn btn-primary" id="saveLocationBtn">
+                    <i class="fas fa-bookmark"></i> Save location
+                </button>
+                <button class="btn btn-secondary" id="viewOrderBtn">
+                    <i class="fas fa-receipt"></i> View Order
+                </button>
+                <button class="btn btn-outline" id="goHomeBtn">
+                    <i class="fas fa-home"></i> Go to Home
+                </button>
+            </div>
+
+            <div class="additional-info">
+                <p><i class="fas fa-info-circle"></i> A confirmation email has been sent to your registered email address.</p>
+                <p><i class="fas fa-shield-alt"></i> Your payment is secured with 256-bit encryption.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Need help? <a href="/contact">Contact Support</a> or call +44 1234 567890</p>
+            <p class="copyright">©️ 2023 ParkEasy. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="/js/payment-confirmation.js"></script>
+</body>
+</html>

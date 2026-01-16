@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  th:replace="~{admin/layout/admin-layout :: layout(~{::section})}"
+>
+  <section>
+    <div class="container-fluid mt-4">
+      <h3 class="h3-title mb-4">Customers</h3>
+
+      <!-- ================= HEADER ================= -->
+      <div class="card shadow-sm rounded-lg mb-3 border-0">
+        <div class="card-body p-3">
+          <div class="row g-3 align-items-end">
+            <!-- Search -->
+            <div class="col-lg-6 col-md-6">
+              <label class="text-body-secondary">Customer</label>
+                <input
+                type="text"
+                id="searchInput"
+                class="form-control"
+                placeholder="Search by name or email..."
+                onkeyup="applyCustomerFilters()"
+                />
+            </div>
+            <!-- Status -->
+            <div class="col-lg-5 col-md-6">
+              <label class="text-body-secondary">Status</label>
+              <select
+                id="statusFilter"
+                class="form-control"
+                onchange="applyCustomerFilters()"
+              >
+            </div>
+                <option value="">All</option>
+                <option value="ACTIVE">Active</option>
+                <option value="BLOCKED">Blocked</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= TABLE ================= -->
+      <!-- ================= TABLE ================= -->
+      <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-body p-3">
+          <table
+            class="table table-borderless align-middle mb-0"
+            style="border-collapse: separate; border-spacing: 0 10px"
+          >
+            <thead>
+              <tr class="bg-dark text-white">
+                <th class="ps-4">Customer ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody id="customerTable">
+              <tr th:each="customer : ${customers}" class="bg-light shadow-sm">
+                <td
+                  class="ps-4 rounded-start fw-medium"
+                  th:text="${customer.customerId}"
+                >
+                  1
+                </td>
+
+                <td th:text="${customer.firstName + ' ' + customer.lastName}">
+                  John Doe
+                </td>
+
+                <td th:text="${customer.email}">john@email.com</td>
+
+                <td th:text="${customer.phone}">0771234567</td>
+
+                <td class="rounded-end">
+                  <span
+                    class="badge"
+                    th:classappend="${customer.user != null and customer.user.status == 'ACTIVE'} 
+                    ? ' bg-success' 
+                    : ' bg-danger'"
+                    th:text="${customer.user != null ? customer.user.status : 'UNKNOWN'}"
+                  >
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex justify-content-center mt-3">
+            <button
+              id="customerToggleBtn"
+              class="btn btn-outline-secondary btn-sm"
+              onclick="toggleCustomerRows()"
+            >
+              Show More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</html>

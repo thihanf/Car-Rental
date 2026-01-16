@@ -20,7 +20,7 @@
   </head>
 
   <body>
-    <div class="admin-layout">
+    <div class="admin-layout admin-wrapper">
       <aside th:replace="~{admin/layout/sidebar :: sidebar}"></aside>
 
       <div class="admin-main">
@@ -29,8 +29,6 @@
         <main class="admin-content">
           <div th:replace="${content}"></div>
         </main>
-
-        <footer th:replace="~{admin/layout/footer :: footer}"></footer>
       </div>
     </div>
 

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Successful</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+  </head>
+  <body>
+    <section class="success">
+      <div class="main-wrapper">
+        <div class="container">
+          <div class="header-section">
+            <div class="success-icon">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h1 class="page-title">Payment successful!</h1>
+          </div>
+
+          <div class="info-card">
+            <div class="card-label">Booking Reference</div>
+            <div class="details-row">
+              <div class="icon-box">
+                <i class="fa-solid fa-hashtag"></i>
+              </div>
+              <div class="text-col">
+                <div class="primary-text" th:text="${booking.bookingId}">
+                  26205
+                </div>
+                <div class="secondary-text">Reference Number</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="card-label">Vehicle Details</div>
+            <div class="details-row">
+              <div class="icon-box">
+                <i class="fa-solid fa-car"></i>
+              </div>
+              <div class="text-col">
+                <div
+                  class="primary-text"
+                  th:text="${booking.car.brand + ' ' + booking.car.model}"
+                >
+                  Toyota Yaris
+                </div>
+                <div class="secondary-text" th:text="${booking.car.type}">
+                  Sedan
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="card-label">Duration</div>
+            <div class="details-row">
+              <div class="icon-box">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+              <div class="text-col">
+                <div class="primary-text" th:text="${rentalDays + ' Days'}">
+                  1 hour
+                </div>
+                <div
+                  class="secondary-text"
+                  th:text="'From ' + ${#temporals.format(booking.startDate, 'dd MMM yyyy')} + ' to ' + ${#temporals.format(booking.endDate, 'dd MMM yyyy')}"
+                >
+                  Ends at 12:15 on 1 May 2023
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <div class="summary-row">
+              <span>Total Paid:</span>
+              <span class="total-price" th:text="'Rs ' + ${booking.totalPrice}"
+                >$5.00</span
+              >
+            </div>
+            <div class="return-wrapper">
+              <a th:href="@{/}" class="btn-primary btn-link">Back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

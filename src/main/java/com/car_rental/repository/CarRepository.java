@@ -10,4 +10,6 @@ import com.car_rental.enums.CarStatus;
 public interface CarRepository extends JpaRepository<Car, Long> {
 
     List<Car> findByStatus(CarStatus status);
+
+    List<Car> findByTypeAndStatus(String type, CarStatus status);
 }

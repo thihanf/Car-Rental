@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Gallery</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+  </head>
+  <body>
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
+    <section class="vehicle-tabs">
+      <div class="content-width">
+        <div class="vgheader">
+          <h2 class="h2-title head">Select A Vehicle Group</h2>
+        </div>
+        <div class="buttons">
+          <a
+            th:href="@{/gallery(type='all', start=${startDate}, end=${endDate})}"
+            th:class="${activeType == null || activeType == 'all' ? 'btn-primary-1' : 'btn-secondary-2'}"
+          >
+            Vehicles
+          </a>
+
+          <a
+            th:href="@{/gallery(type='Sedan', start=${startDate}, end=${endDate})}"
+            th:class="${activeType == 'Sedan' ? 'btn-primary-1' : 'btn-secondary-2'}"
+          >
+            <img th:src="@{/images/car.png}" class="vehi" /> Sedan
+          </a>
+
+          <a
+            th:href="@{/gallery(type='Van', start=${startDate}, end=${endDate})}"
+            th:class="${activeType == 'Van' ? 'btn-primary-1' : 'btn-secondary-2'}"
+          >
+            <img th:src="@{/images/van.png}" class="vehi" /> Van
+          </a>
+
+          <a
+            th:href="@{/gallery(type='Pickup', start=${startDate}, end=${endDate})}"
+            th:class="${activeType == 'Pickup' ? 'btn-primary-1' : 'btn-secondary-2'}"
+          >
+            <img th:src="@{/images/pickup-truck.png}" class="vehi" /> Pickup
+          </a>
+
+          <a
+            th:href="@{/gallery(type='Suv', start=${startDate}, end=${endDate})}"
+            th:class="${activeType == 'Suv' ? 'btn-primary-1' : 'btn-secondary-2'}"
+          >
+            <img th:src="@{/images/suv.png}" class="vehi" /> Suv
+          </a>
+
+          <a
+            th:href="@{/gallery(type='Minivan', start=${startDate}, end=${endDate})}"
+            th:class="${activeType == 'Minivan' ? 'btn-primary-1' : 'btn-secondary-2'}"
+          >
+            <img th:src="@{/images/minivan.png}" class="vehi" /> Minivan
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="vehicle-gallery">
+      <div class="content-width">
+        <div class="wrap-all">
+          <div class="inner-wrap">
+            <div class="vehicle-grid">
+              <div th:each="car : ${cars}">
+                <div
+                  th:replace="~{fragments/car-card :: carCard(${car}, ${startDate}, ${endDate})}"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

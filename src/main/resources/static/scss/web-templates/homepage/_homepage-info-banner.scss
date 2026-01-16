@@ -42,7 +42,7 @@
     }
     @include tablet-landscape {
       grid-template-columns: repeat(4, 1fr);
-      gap: auto;
+      gap: 5q0px;
     }
   }
 

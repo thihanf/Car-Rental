@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
     <link rel="stylesheet" th:href="@{/css/main.css}" />
   </head>
   <body>
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
     <!-- Homepage hero block starts here -->
     <section class="homepage-hero">
       <div class="content-width wrap-all">
@@ -17,68 +23,47 @@
                 Experience the road like never before
               </h1>
               <p class="p-body-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text
+                Choose from a diverse range of vehicles, from fuel-efficient city cars to spacious luxury SUVs. Every vehicle is meticulously maintained and sanitized for your safety
               </p>
               <div class="button-wrap">
                 <button class="btn-secondary">View all Cars</button>
               </div>
             </div>
             <!-- form styles start here -->
-            <div class="form-wrap">
+            <div th:if="${errorMessage}" style="color: red; font-weight: bold;" th:text="${errorMessage} "></div>
+            <div th:if="${successMessage}" style="color: green; font-weight: bold;" th:text="${successMessage}"></div>
+            
+            <form class="form-wrap" th:action="@{/book}" th:object="${bookingRequest}" method="POST">
               <h3 class="h3-title-form-title">Book your car</h3>
               <div class="input-label-wrapper">
                 <div class="date-field-wrapper">
                   <select
                     class="form-select p-body-text date-field"
+                    name="carType" 
                     aria-label="Default select example"
+                    required
                   >
-                    <option selected>Car Type</option>
-                    <option value="1">Sedan</option>
-                    <option value="2">Van</option>
-                    <option value="3">Pickup</option>
-                    <option value="4">Suv</option>
-                    <option value="5">Minivan</option>
-                  </select>
-                </div>
-
-                <div class="date-field-wrapper">
-                  <select
-                    class="form-select p-body-text date-field"
-                    aria-label="Default select example"
-                  >
-                    <option selected>Place of rental</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
-
-                <div class="date-field-wrapper">
-                  <select
-                    class="form-select p-body-text date-field"
-                    aria-label="Default select example"
-                  >
-                    <option selected>Place of return</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="" selected disabled>Car Type</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="Van">Van</option>
+                    <option value="Pickup">Pickup</option>
+                    <option value="Suv">Suv</option>
+                    <option value="Minivan">Minivan</option>
                   </select>
                 </div>
 
                 <h3 class="h3-title label">Rental date</h3>
                 <div class="date-field-wrapper">
-                  <input class="date-field" type="date" />
+                  <input class="date-field" type="date" name="rentalDate" required />
                 </div>
 
                 <h3 class="h3-title label">Return date</h3>
                 <div class="date-field-wrapper">
-                  <input class="date-field" type="date" />
+                  <input class="date-field" type="date" name="returnDate" required />
                 </div>
               </div>
-              <button class="btn-secondary">Book now</button>
-            </div>
+              <button type="submit" class="btn-secondary">Book now</button>
+            </form>
             <!-- form styles ends here -->
           </div>
         </div>
@@ -91,50 +76,32 @@
         <div class="main-wrapper">
           <div class="info-wrapper">
             <div class="info-icon-wrapper">
-              <img
-                src="./icons/homepage/location-svgrepo-com.svg"
-                width="64"
-                height="64"
-                class="info-icon"
-                alt="location icon"
-              />
+              <img th:src="@{/icons/homepage/location-pin-svgrepo-com.svg}" 
+              width="64" height="64" class="info-icon" alt="location icon" />
             </div>
             <h3 class="h3-title">Availability</h3>
             <div class="p-body-text center-info-text">
-              Diam tincidunt tincidunt erat at semper fermentum. Id ultricies
-              quis
+             Find us at major airports, city centers, and transit hubs. We offer flexible pickup and drop-off options to fit your travel schedule perfectly.
             </div>
           </div>
           <div class="info-wrapper">
             <div class="info-icon-wrapper">
-              <img
-                src="./icons/homepage/car-side-svgrepo-com.svg"
-                width="64"
-                height="64"
-                class="info-icon"
-                alt="location icon"
-              />
+               <img th:src="@{/icons/homepage/car-side-svgrepo-com.svg}" 
+                width="64" height="64" class="info-icon" alt="car icon"/>
             </div>
             <h3 class="h3-title">Comfort</h3>
             <div class="p-body-text center-info-text">
-              Diam tincidunt tincidunt erat at semper fermentum. Id ultricies
-              quis
+             Choose from a diverse range of vehicles, from fuel-efficient city cars to spacious luxury SUVs. Every vehicle is meticulously maintained for your safety and comfort.
             </div>
           </div>
           <div class="info-wrapper">
             <div class="info-icon-wrapper">
-              <img
-                src="./icons/homepage/wallet-svgrepo-com.svg"
-                width="64"
-                height="64"
-                class="info-icon"
-                alt="location icon"
-              />
+              <img th:src="@{/icons/homepage/wallet-svgrepo-com.svg}" 
+                width="64" height="64" class="info-icon" alt="wallet icon"/>
             </div>
             <h3 class="h3-title">Savings</h3>
             <div class="p-body-text center-info-text">
-              Diam tincidunt tincidunt erat at semper fermentum. Id ultricies
-              quis
+              Enjoy competitive rates with no hidden fees. What you see is what you pay, ensuring you get the best value for your car rental needs.
             </div>
           </div>
         </div>
@@ -148,10 +115,10 @@
           <!-------image starts here-------->
           <div class="image-wrap">
           <picture class="picture">
-            <source srcset="./images//turku-finland-december-14-2021-full-view-of-11-aspect-ratio-of-fontana-building-in-downtown-turku-known-as-a-restaurant-cafe-bistro-and-bar-2HCTAGF.jpg" />
+            <source th:srcset="@{/images/key.jpg}" />
             <img
               class="image info-image"
-              src="./images/turku-finland-december-14-2021-full-view-of-11-aspect-ratio-of-fontana-building-in-downtown-turku-known-as-a-restaurant-cafe-bistro-and-bar-2HCTAGF.jpg"
+              th:src="@{/images/key.jpg}"
               alt="Car silhouette"
             />
           </picture>
@@ -163,44 +130,40 @@
             <div class="feature-item-wrapper">
               <div class="feature-heading-wrapper">
                 <p class="p-body-text feature-number">1</p>
-                <h3 class="h3-title">Avaliabe</h3>
+                <h3 class="h3-title">Strategic Pickup Locations</h3>
               </div>
               <p class="p-body-text">
-                Non amet fermentum est in enim at sit ullamcorper. Sit elementum
-                rhoncus nullam feugiat. Risus sem fermentum dui
+                Access our services easily from major airports, bustling city centers, and key transit hubs.
               </p>
             </div>
 
             <div class="feature-item-wrapper">
               <div class="feature-heading-wrapper">
-                <p class="p-body-text feature-number">1</p>
-                <h3 class="h3-title">Avaliabe</h3>
+                <p class="p-body-text feature-number">2</p>
+                <h3 class="h3-title">Quality</h3>
               </div>
               <p class="p-body-text">
-                Non amet fermentum est in enim at sit ullamcorper. Sit elementum
-                rhoncus nullam feugiat. Risus sem fermentum dui
+                Choose from an extensive range of vehicles, from fuel-efficient compacts for city driving to spacious, powerful SUVs for family adventures.
               </p>
             </div>
 
             <div class="feature-item-wrapper">
               <div class="feature-heading-wrapper">
-                <p class="p-body-text feature-number">1</p>
-                <h3 class="h3-title">Avaliabe</h3>
+                <p class="p-body-text feature-number">3</p>
+                <h3 class="h3-title">Value</h3>
               </div>
               <p class="p-body-text">
-                Non amet fermentum est in enim at sit ullamcorper. Sit elementum
-                rhoncus nullam feugiat. Risus sem fermentum dui
+               Enjoy highly competitive daily rates with no hidden fees or surprise charges.
               </p>
             </div>
 
             <div class="feature-item-wrapper">
               <div class="feature-heading-wrapper">
-                <p class="p-body-text feature-number">1</p>
-                <h3 class="h3-title">Avaliabe</h3>
+                <p class="p-body-text feature-number">4</p>
+                <h3 class="h3-title">Seamless Booking Experience</h3>
               </div>
               <p class="p-body-text">
-                Non amet fermentum est in enim at sit ullamcorper. Sit elementum
-                rhoncus nullam feugiat. Risus sem fermentum dui
+                Reserve your perfect vehicle in seconds through our intuitive, mobile-friendly platform.
               </p>
             </div>
           </div>
@@ -224,9 +187,12 @@
             </div>
           </div>
           <div class="car-gallery-wrapper">
-             <div th:each="car : ${cars}" th:if="${stat.index < 3}">
-              <div th:replace="fragments/car-card :: carCard(${car})"></div>
+            <div th:each="car, stat : ${cars}">
+              <div th:if="${stat.index < 6}">
+                <div th:replace="~{fragments/car-card :: carCard(${car}, null, null)}"></div>
+              </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -292,6 +258,8 @@
         </div>
       </div>
     </section>
+    <div th:replace="~{fragments/footer :: footer-fragment}"></div>
       <!--homepage-info-banner ends here-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

@@ -1,0 +1,112 @@
+.sign-in {
+  /* LEFT */
+  /* RIGHT */
+}
+.sign-in .login-page {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+.sign-in .login-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+.sign-in .login-left {
+  flex: 1;
+  background: #5aa0d1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sign-in .login-left h1 {
+  color: #fff;
+  font-size: 64px;
+  font-weight: 700;
+}
+.sign-in .login-right {
+  flex: 1;
+  background: #f7f9fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sign-in .login-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 14px;
+  width: 360px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+.sign-in .login-card h2 {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.sign-in .subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+}
+.sign-in .form-group {
+  text-align: left;
+  margin-bottom: 16px;
+}
+.sign-in .form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+}
+.sign-in .form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #f1f1f1;
+  font-size: 14px;
+}
+.sign-in .form-group input:focus {
+  outline: none;
+  background: #e9eef5;
+}
+.sign-in .forgot {
+  text-align: right;
+  margin-bottom: 20px;
+}
+.sign-in .forgot a {
+  font-size: 12px;
+  color: #4a90e2;
+  text-decoration: none;
+}
+.sign-in .btn-login {
+  width: 100%;
+  background: #5aa0d1;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.sign-in .btn-login:hover {
+  background: #4b90c4;
+}
+.sign-in .error {
+  margin-top: 12px;
+  color: #e63946;
+  font-size: 13px;
+}
+.sign-in .success {
+  margin-top: 12px;
+  color: #2a9d8f;
+  font-size: 13px;
+}
+.sign-in .register-text {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #666;
+}
+.sign-in .register-text a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 500;
+}/*# sourceMappingURL=sign-in.css.map */

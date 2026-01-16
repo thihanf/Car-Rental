@@ -12,13 +12,13 @@
           <div class="row g-3 align-items-end">
             <!-- Customer -->
             <div class="col-lg-6 col-md-6">
-              <label class="text-body-secondary">Customer</label>
+              <label class="text-body-secondary">Vehicles</label>
               <input
                 type="text"
                 id="searchInput"
                 class="form-control"
-                placeholder="Search customers..."
-                onkeyup="applyFilters()"
+                placeholder="Search vehicles..."
+                onkeyup="applyVehicleFilters()"
               />
             </div>
 
@@ -28,7 +28,7 @@
               <select
                 id="statusFilter"
                 class="form-control"
-                onchange="applyFilters()"
+                onchange="applyVehicleFilters()"
               >
                 <option value="">All</option>
                 <option value="AVAILABLE">Available</option>
