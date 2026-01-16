@@ -1862,7 +1862,6 @@ h6 {
   /* Text Styling */
   /* Text Button (Save Location) */
   /* Footer & Primary Button */
-  /* --- MOBILE RESPONSIVENESS --- */
 }
 .success * {
   box-sizing: border-box;
@@ -2001,15 +2000,27 @@ h6 {
   margin-bottom: 20px;
   padding: 0 10px;
 }
-.success .btn-primary {
+.success .return-wrapper {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
   width: 100%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+.success .btn-primary {
+  display: inline-block;
+  width: auto;
+  min-width: 250px;
   background-color: #fa9d1c;
   color: white;
   font-size: 16px;
   font-weight: 600;
-  padding: 16px;
+  padding: 12px 40px;
   border-radius: 12px;
-  letter-spacing: 0.3px;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.2s;
 }
 .success .btn-primary:hover {
   opacity: 0.9;
