@@ -2,6 +2,7 @@
   .footer-wrapper {
     display: flex;
     flex-direction: column;
+    padding-block-start: 120px;
     gap: 30px;
     @include tablet-landscape {
       gap: 60px;

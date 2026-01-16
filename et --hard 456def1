@@ -1,0 +1,55 @@
+* [33m564232b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mThihan[m[33m, [m[1;31morigin/Thihan[m[33m)[m Backend-intergration-1
+* [33mf30bd1b[m Completed about-us.scss
+*   [33mce454cb[m Merge pull request #7 from thihanf/Thihan
+[32m|[m[33m\[m  
+[32m|[m *   [33m2fc204d[m Merge branch 'main' into Thihan
+[32m|[m [34m|[m[32m\[m  
+[32m|[m [34m|[m[32m/[m  
+[32m|[m[32m/[m[34m|[m   
+* [34m|[m   [33m796cae0[m[33m ([m[1;32mmain[m[33m)[m Merge pull request #4 from thihanf/Rashmie
+[36m|[m[1;31m\[m [34m\[m  
+[36m|[m * [34m\[m   [33m5163096[m[33m ([m[1;31morigin/Rashmie[m[33m)[m Merge branch 'main' into Rashmie
+[36m|[m [1;32m|[m[36m\[m [34m\[m  
+[36m|[m [1;32m|[m[36m/[m [34m/[m  
+[36m|[m[36m/[m[1;32m|[m [34m|[m   
+* [1;32m|[m [34m|[m   [33mfc8c7cb[m Merge pull request #3 from thihanf/Thihan
+[1;34m|[m[1;35m\[m [1;32m\[m [34m\[m  
+[1;34m|[m [1;35m|[m * [34m|[m [33m3e55979[m Remove target folder and update .gitignore
+[1;34m|[m [1;35m|[m * [34m|[m [33mb679cb3[m Restore stashed changes and add new UI files
+[1;34m|[m [1;35m|[m [1;35m|[m * [33m46e4352[m Linked about-us.scss to main.scss
+[1;34m|[m [1;35m|[m [1;35m|[m * [33me5a2ba6[m added about-us.html
+[1;34m|[m [1;35m|[m [1;35m|[m[1;35m/[m  
+[1;34m|[m [1;35m|[m[1;35m/[m[1;35m|[m   
+[1;34m|[m * [1;35m|[m [33me62e50c[m changed payment-display folder name
+[1;34m|[m * [1;35m|[m   [33m3705c7b[m Merge branch 'main' of https://github.com/thihanf/Car-Rental into Thihan
+[1;34m|[m [1;36m|[m[1;34m\[m [1;35m\[m  
+[1;34m|[m [1;36m|[m[1;34m/[m [1;35m/[m  
+[1;34m|[m[1;34m/[m[1;36m|[m [1;35m|[m   
+* [1;36m|[m [1;35m|[m   [33m2914f1e[m Merge pull request #2 from thihanf/Malik
+[32m|[m[33m\[m [1;36m\[m [1;35m\[m  
+[32m|[m * [1;36m|[m [1;35m|[m [33mdbb4b7d[m[33m ([m[1;31morigin/Malik[m[33m)[m Payment Details Page
+[32m|[m [1;35m|[m [1;36m|[m[1;35m/[m  
+[32m|[m [1;35m|[m[1;35m/[m[1;36m|[m   
+* [1;35m|[m [1;36m|[m   [33m80f42e6[m Merge PR #1: Added Web Template folder
+[34m|[m[35m\[m [1;35m\[m [1;36m\[m  
+[34m|[m [35m|[m [1;35m|[m * [33m6f215e3[m navbar,footer,homepage files added
+[34m|[m [35m|[m [1;35m|[m[35m/[m  
+[34m|[m [35m|[m[35m/[m[1;35m|[m   
+[34m|[m * [1;35m|[m   [33mc2ab1b0[m Merged main into Thihan and resolved conflicts for Pull Request
+[34m|[m [36m|[m[34m\[m [1;35m\[m  
+[34m|[m [36m|[m[34m/[m [1;35m/[m  
+[34m|[m[34m/[m[36m|[m [1;35m|[m   
+* [36m|[m [1;35m|[m   [33mae1ae1b[m Merged remote main branch with local main, resolving .gitignore conflict
+[1;32m|[m[1;35m\[m [36m\[m [1;35m\[m  
+[1;32m|[m [1;35m|[m [36m|[m[1;35m/[m  
+[1;32m|[m [1;35m|[m[1;35m/[m[36m|[m   
+[1;32m|[m [1;35m|[m *   [33m6e21a8f[m Merged remote branch origin/Thihan with local history
+[1;32m|[m [1;35m|[m [1;34m|[m[1;35m\[m  
+[1;32m|[m [1;35m|[m [1;34m|[m[1;35m/[m  
+[1;32m|[m [1;35m|[m[1;35m/[m[1;34m|[m   
+[1;32m|[m * [1;34m|[m [33m6caa682[m[33m ([m[1;31morigin/Meditha[m[33m, [m[1;31morigin/Kaveeshan[m[33m)[m Initial commit
+[1;32m|[m  [1;34m/[m  
+[1;32m|[m * [33m13acf07[m Added web-template folder
+[1;32m|[m * [33m50ab91d[m Added web-template folder
+[1;32m|[m[1;32m/[m  
+* [33mece4a76[m Initial commit

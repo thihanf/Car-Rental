@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Details</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+  </head>
+  <body>
+    <section class="payment-details">
+      <div class="content-width wrap-all">
+        <section class="header">
+          <h2 class="h2-title">Checkout</h2>
+        </section>
+
+        <section class="shipping-address">
+          <h3 class="h3-title">Shipping address</h3>
+          <div class="card address-card">
+            <div class="address-top">
+              <p class="p-body-name">Malik Shiran</p>
+            </div>
+            <p class="p-body-text">
+              3 Newbridge Court<br />Chino Hills, CA 91709, Udawaththa Kale
+            </p>
+          </div>
+        </section>
+
+        <section class="order-info">
+          <div class="order-header">
+            <h3
+              class="h3-title-form"
+              th:text="'Order No: ' + ${booking.bookingId}"
+            >
+              Order No: 1234567
+            </h3>
+            <h3
+              class="h3-title-form"
+              th:text="${#temporals.format(booking.startDate, 'dd-MM-yyyy')}"
+            >
+              05-12-2025
+            </h3>
+          </div>
+        </section>
+
+        <section class="product-section">
+          <div class="card product-card">
+            <img
+              th:src="${booking.car.imageUrl}"
+              class="product-img"
+              alt="Car Image"
+            />
+            <div class="product-info">
+              <p class="p-body-text">Car Details</p>
+              <p
+                class="p-body-text-gray"
+                th:text="${booking.car.brand + ' ' + booking.car.model}"
+              >
+                Mercedes Benz
+              </p>
+              <p class="p-body-text">
+                <span class="bold" th:text="${booking.car.type}">Sedan</span>
+              </p>
+            </div>
+            <h3 class="h3-title" th:text="'Rs ' + ${booking.car.rentPrice}">
+              500$
+            </h3>
+          </div>
+        </section>
+
+        <section class="summary">
+          <div class="row">
+            <p class="p-body-text">Rental Days:</p>
+            <p class="p-body-text" th:text="${rentalDays} + ' Days'">1 Day</p>
+          </div>
+          <div class="row total">
+            <p class="p-body-text">Summary:</p>
+            <p class="p-body-text" th:text="'Rs ' + ${booking.totalPrice}">
+              Rs 600
+            </p>
+          </div>
+        </section>
+
+        <section class="button-section">
+          <form th:action="@{/confirm-booking}" method="POST">
+            <input
+              type="hidden"
+              name="bookingId"
+              th:value="${booking.bookingId}"
+            />
+
+            <button type="submit" class="btn-secondary">Confirm Booking</button>
+          </form>
+        </section>
+      </div>
+    </section>
+  </body>
+  <div th:replace="~{fragments/footer :: footer-fragment}"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</html>

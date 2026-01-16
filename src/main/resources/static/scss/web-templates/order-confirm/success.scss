@@ -1,0 +1,226 @@
+.success {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #f4f4f4;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .main-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 700px;
+    padding: 40px 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  /* --- HEADER SECTION --- */
+  .header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .success-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #588128;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .success-icon i {
+    color: white;
+    font-size: 36px;
+  }
+
+  .page-title {
+    font-weight: 700;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+  }
+
+  /* --- INFO CARDS --- */
+  .info-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+  }
+
+  .card-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .details-row {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Icon Box Styling */
+  .icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: #f3f4f6;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+
+  .icon-box i {
+    font-size: 20px;
+    color: #333;
+  }
+
+  /* Text Styling */
+  .text-col {
+    flex: 1;
+  }
+
+  .primary-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 2px;
+  }
+
+  .secondary-text {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+
+  .btn {
+    cursor: pointer;
+    font-family: inherit;
+    border: none;
+    transition: opacity 0.2s;
+  }
+
+  /* Text Button (Save Location) */
+  .btn-text {
+    background: transparent;
+    color: #d32f2f;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: auto;
+  }
+
+  .btn-text:hover {
+    text-decoration: underline;
+  }
+
+  /* Footer & Primary Button */
+  .footer-section {
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+  }
+
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  .return-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    width: auto;
+    min-width: 250px;
+    background-color: #fa9d1c;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 40px;
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: center;
+    transition: opacity 0.2s;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.9;
+  }
+
+  @media screen and (max-width: 600px) {
+    .main-wrapper {
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .container {
+      max-width: 100%;
+      box-shadow: none;
+      border-radius: 0;
+      padding: 30px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-title {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .info-card {
+      padding: 16px;
+      border-radius: 12px;
+      background-color: #fafafa;
+    }
+
+    .footer-section {
+      margin-top: auto;
+      border-top: none;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.about-us-banner {
+  padding-block: 60px;
+  .main-wrapper {
+    display: flex;
+    gap: clamp(2rem, 5vw, 5rem);
+
+    max-width: 1296px;
+    width: 100%;
+    padding-block: 30px;
+    padding-inline: 42px;
+
+    /* Mobile first */
+    flex-direction: column;
+
+    background-color: $primary-color;
+    border-radius: 20px;
+
+    @include tablet-landscape {
+      flex-direction: row;
+      min-height: 380px;
+    }
+  }
+
+  .left-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    color: #fff; // ✅ FIX text color
+    max-width: 520px;
+    z-index: 2;
+
+    .banner-title {
+      color: #fff;
+    }
+
+    .p-body-text {
+      color: rgba(255, 255, 255, 0.85);
+    }
+  }
+
+  .button-wrapper {
+    display: inline-flex;
+
+    .banner-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      white-space: nowrap; // ✅ prevents stretching
+      width: 132px;
+      height: 40px;
+    }
+  }
+
+  /* RIGHT SIDE VISUAL */
+  .right-wrapper {
+    position: relative;
+    flex: 1;
+    min-height: 260px;
+
+    @include tablet-landscape {
+      min-height: 340px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      /* Offset blur to the right */
+      top: 50%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+
+      width: 85%;
+      aspect-ratio: 16 / 9;
+
+      background: radial-gradient(
+        ellipse at center,
+        rgba(255, 255, 255, 0.35),
+        rgba(255, 255, 255, 0.1) 60%,
+        transparent 100%
+      );
+
+      border-radius: 30px;
+      filter: blur(50px);
+      opacity: 0.9;
+    }
+  }
+}

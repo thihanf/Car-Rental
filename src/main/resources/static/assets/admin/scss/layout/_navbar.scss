@@ -1,0 +1,30 @@
+.admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    input {
+      border: none;
+      background: #f0f1f6;
+      padding: 8px 14px;
+      border-radius: 12px;
+      font-size: 14px;
+    }
+
+    .icon {
+      cursor: pointer;
+    }
+
+    img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.about-us-feature {
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    @include tablet-landscape {
+      flex-direction: row;
+      gap: 40px;
+    }
+    @include wide-desktop {
+      gap: 60px;
+    }
+    padding-block: 60px;
+  }
+
+  .top-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    @include tablet-landscape {
+      gap: 20px;
+    }
+
+    @include wide-desktop {
+      gap: 40px;
+    }
+  }
+
+  .feature-main-title {
+    @include tablet-portrait {
+      font-size: 30px;
+    }
+    @include wide-desktop {
+      font-size: 50px;
+    }
+  }
+
+  .feature-item-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    @include tablet-landscape {
+      gap: 20px;
+    }
+    @include wide-desktop {
+      gap: 40px;
+    }
+  }
+
+  .feature-item-inner-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .feature-item {
+    width: 32px;
+    height: 32px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .item-image {
+    width: 20px;
+    height: 20px;
+    display: block;
+    filter: brightness(0) invert(1); //makes the svg white
+  }
+
+  //image styles start here
+  .image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 368 / 232;
+    overflow: hidden;
+    @include tablet-landscape {
+      aspect-ratio: 550 / 549;
+    }
+
+    .picture,
+    .image {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .image {
+      object-fit: cover;
+    }
+  }
+
+  .info-image {
+    border-radius: 20px;
+  }
+  //image styles ends here
+}

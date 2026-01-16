@@ -1,0 +1,50 @@
+.stats {
+  .main-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .stat-card-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 220px;
+    height: 120px;
+
+    border-radius: 20px;
+  }
+
+  .stat-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-block-start: 30px;
+    padding-block-end: 20px;
+    padding-inline-start: 25px;
+    padding-inline-end: 30px;
+    white-space: nowrap;
+  }
+
+  .stat-header {
+    font-size: 14px;
+  }
+
+  .stat-vehicle {
+    background-color: rgb(221, 239, 224); //light green
+    margin-inline-end: 30px;
+  }
+
+  .stat-customers {
+    background-color: beige;
+    margin-inline-end: 30px;
+  }
+
+  .stat-bookings {
+    background-color: lightcoral;
+  }
+
+  .icon-wrapper {
+    padding-block-start: 20px;
+    padding-block-end: 70px;
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+  }
+}

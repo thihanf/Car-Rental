@@ -1,0 +1,45 @@
+<aside class="sidebar" th:fragment="sidebar">
+  <h3 class="h3-title-form-title title-color">Rent & go.</h3>
+
+  <nav class="sidebar-nav">
+    <a
+      class="p-body-text"
+      th:href="@{/admin/dashboard}"
+      th:classappend="${activePage == 'dashboard'} ? ' active'"
+    >
+      Dashboard
+    </a>
+
+    <a
+      class="p-body-text"
+      th:href="@{/admin/vehicles}"
+      th:classappend="${activePage == 'vehicles'} ? ' active'"
+    >
+      Vehicles
+    </a>
+
+    <a
+      class="p-body-text"
+      th:href="@{/admin/bookings}"
+      th:classappend="${activePage == 'bookings'} ? ' active'"
+    >
+      Bookings
+    </a>
+
+    <a
+      class="p-body-text"
+      th:href="@{/admin/customers}"
+      th:classappend="${activePage == 'customers'} ? ' active'"
+    >
+      Customers
+    </a>
+
+    <a
+      class="p-body-text"
+      th:href="@{/admin/users}"
+      th:classappend="${activePage == 'users'} ? ' active'"
+    >
+      Users
+    </a>
+  </nav>
+</aside>

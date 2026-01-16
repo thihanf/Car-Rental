@@ -1,0 +1,110 @@
+.about-us-review {
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    @include tablet-landscape {
+      gap: 40px;
+    }
+
+    padding-block: 60px;
+  }
+
+  .review-main-title {
+    font-weight: bold;
+    @include tablet-portrait {
+      font-size: 40px;
+    }
+    @include wide-desktop {
+      font-size: 50px;
+    }
+  }
+
+  .second-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include tablet-landscape {
+      flex-direction: row;
+      gap: 24px;
+    }
+  }
+
+  .review-card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    @include tablet-portrait {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include tablet-landscape {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .review-card {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ecebff;
+
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  .card-content {
+    padding: 32px 24px 48px;
+    text-align: center;
+  }
+
+  .quote-icon {
+    width: 32px;
+    margin-bottom: 16px;
+  }
+
+  .review-text {
+    line-height: 1.6;
+  }
+
+  .card-footer {
+    background: $primary-color;
+    color: #fff;
+    text-align: center;
+    padding: 40px 24px 24px;
+    position: relative;
+    border-radius: 12px;
+  }
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid #fff;
+  }
+
+  .footer-text {
+    color: white;
+  }
+
+  .name-text-size {
+    @include tablet-landscape {
+      font-size: 18px;
+    }
+    @include wide-desktop {
+      font-size: 20px;
+    }
+  }
+}

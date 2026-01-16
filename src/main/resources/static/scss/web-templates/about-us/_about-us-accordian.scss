@@ -1,0 +1,35 @@
+.about-us-accordian {
+  .faq-section {
+    background-color: #ffffff;
+  }
+
+  .faq-accordion .accordion-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+
+  .faq-accordion .accordion-button {
+    font-weight: 600;
+    padding: 20px 24px;
+    background-color: #fff;
+    color: #111827;
+  }
+
+  .faq-accordion .accordion-button:not(.collapsed) {
+    background-color: #f9fafb;
+    box-shadow: none;
+  }
+
+  .faq-accordion .accordion-button:focus {
+    box-shadow: none;
+    border-color: #6366f1; /* subtle purple focus */
+  }
+
+  .faq-accordion .accordion-body {
+    padding: 20px 24px;
+    color: #6b7280;
+    line-height: 1.6;
+  }
+}
